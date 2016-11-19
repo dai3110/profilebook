@@ -16,6 +16,7 @@ gulp.task('scripts', function() {
    'src/assets/scripts/_utility.js',
    'src/assets/scripts/_logo_texture.js',
    'src/assets/scripts/_menu_panel.js',
+   'src/assets/scripts/_page_transition.js',
    'src/assets/scripts/main.js'
   ])
     .pipe(modules.sourcemaps.init())
