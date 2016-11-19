@@ -1,5 +1,17 @@
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('/assets/fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+	src: url('/assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('/assets/fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('/assets/fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('/assets/fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('/assets/fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 *{
 	box-sizing : border-box;
+}
+
+HTML{
+	font-size : 65%;
 }
 
 BODY{
@@ -26,8 +38,8 @@ BODY{
 		height: 220px;
 		border-radius: 20px;
 		box-shadow: inset 0px 0px 12px 8px rgba(255,255,255,0.4);
-		background-color: rgba(20,150,235,0.3);
-		transition : background-color 500ms ease-in-out;
+		background-color: rgba(97, 183, 255, 0.4);
+		transition : all 500ms ease-in-out;
 		
 		&.__order_1{ top :   0px; left :   0px; }
 		&.__order_2{ top :   0px; left : 240px; }
@@ -38,6 +50,48 @@ BODY{
 		&.__order_7{ top : 480px; left :   0px; }
 		&.__order_8{ top : 480px; left : 240px; }
 		&.__order_9{ top : 480px; left : 480px; }
+		
+		&::before{
+			content: attr(data-icon);
+			font-family: 'FontAwesome';
+			display : block;
+			width : 100%;
+			margin-top : 30px;
+			height : 150px;
+			font-size : 12rem;
+			text-align : center;
+			text-shadow: -1px -1px 1px rgba(13, 55, 98, 0.8),1px 1px 1px rgba(255,255,255,0.7);
+		}
+		
+		& >A{
+			position : absolute;
+			width : 100%;
+			height : auto;
+			left : 0px;
+			bottom : 20px;
+			font-size : 2.5rem;
+			font-family: 'Nunito';
+			text-decoration: none;
+			text-align : center;
+			text-shadow: -1px -1px 0px rgba(13,55,98,1);
+		}
+		
+		& >A,
+		&::before{
+			opacity : 0.5;
+			color: rgb(255, 255, 255);
+			transition : color 500ms ease-in-out;
+		}
+		
+		&.__main{
+			background-color: rgba(255, 255, 255, 0.4);
+			box-shadow: inset 0px 0px 12px 8px rgba(124, 186, 231, 0.25);
+			& > A,
+			&::before{
+				color : rgb(118, 168, 247);
+				text-shadow: none;
+			}
+		}
 	}
 	
 	&__frame{
@@ -59,6 +113,15 @@ BODY{
 	}
 	&__frame.is-active > &__panel{
 		background-color: rgba(34, 96, 214, 0.7);
+		
+		&.__main{
+			background-color: rgba(255, 255, 255, 0.7);
+			box-shadow: inset 0px 0px 12px 8px rgba(73, 133, 225, 0.25);
+			& > A,
+			&::before{
+				color: rgb(10, 79, 187);
+			}
+		}
 	}
 }
 
