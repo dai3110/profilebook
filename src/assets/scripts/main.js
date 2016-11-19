@@ -1,1 +1,1 @@
-window.ProfileBook = window.ProfileBook || {};document.addEventListener("DOMContentLoaded", function(){	ProfileBook.util.queryEach(".c-main_menu__frame", ProfileBook.setupMenu);}, false);
+window.ProfileBook = window.ProfileBook || {};window.ProfileBook.on = window.ProfileBook.on || {};document.addEventListener("DOMContentLoaded", function(){	ProfileBook.util.queryEach(".c-texture_logo", ProfileBook.setupLogo);	ProfileBook.util.queryEach(".c-main_menu__frame", ProfileBook.setupMenu);}, false);

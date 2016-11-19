@@ -1,1 +1,1 @@
-window.ProfileBook = window.ProfileBook || {};window.ProfileBook.config = {	menu : {		activeClassName : "is-active"	}		};
+window.ProfileBook = window.ProfileBook || {};window.ProfileBook.on = window.ProfileBook.on || {};window.ProfileBook.config = {	menu : {		activeClassName : "is-active"	},	logo : {		dot : {			className : "u-text_dot"		}	}		};

@@ -13,6 +13,9 @@
 HTML{
 	font-size : 65%;
 }
+HTML, BODY{
+	overflow : hidden;
+}
 
 BODY{
 	background-image : url('/images/bg.jpg');
@@ -22,6 +25,23 @@ BODY{
 
 .u-linklabel{
 	display : inline;
+}
+.u-text_dot{
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 1px 2px 1px 1px rgba(126, 165, 212, 0.4);
+	opacity: 0.8;
+	transform : rotate(0deg);
+	transition : all 555ms linear;
+	
+	&.is-active{
+		opacity: 0;
+		transition : all 777ms linear;
+	}
 }
 
 .c-main_menu{
@@ -34,6 +54,7 @@ BODY{
 	transform-style: preserve-3d;
 	perspective: 500px;
 	perspective-origin: bottom;
+	z-index : 1;
 	
 	&__panel{
 		position: absolute;
@@ -139,7 +160,25 @@ BODY{
 }
 
 
-
+.c-texture_logo{
+	font-family: 'Sarala';
+	font-size: 5.5rem;
+	letter-spacing: 10px;
+	position: absolute;
+	display: inline-block;
+	width: 555px;
+	height : 120px;
+	top: 200px;
+	left: calc(50% - 555px / 2);
+	z-index : 2;
+	
+	&__text{
+		&::before{
+			content : attr(data-logo-text);
+			color : rgba(0,0,0,0);
+		}
+	}
+}
 
 
 
