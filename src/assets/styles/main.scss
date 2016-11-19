@@ -1,4 +1,79 @@
-BODY{
-	color : white;
-	background-color : black;
+*{
+	box-sizing : border-box;
 }
+
+BODY{
+	background-image : url('/images/bg.jpg');
+	background-size : cover;
+	background-position : bottom;
+}
+
+
+.c-main_menu{
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	display: block;
+	transform-style: preserve-3d;
+	perspective: 500px;
+	perspective-origin: bottom;
+	
+	&__panel{
+		position: absolute;
+		width: 220px;
+		height: 220px;
+		border-radius: 20px;
+		box-shadow: inset 0px 0px 12px 8px rgba(255,255,255,0.4);
+		background-color: rgba(20,150,235,0.3);
+		transition : background-color 500ms ease-in-out;
+		
+		&.__order_1{ top :   0px; left :   0px; }
+		&.__order_2{ top :   0px; left : 240px; }
+		&.__order_3{ top :   0px; left : 480px; }
+		&.__order_4{ top : 240px; left :   0px; }
+		&.__order_5{ top : 240px; left : 240px; }
+		&.__order_6{ top : 240px; left : 480px; }
+		&.__order_7{ top : 480px; left :   0px; }
+		&.__order_8{ top : 480px; left : 240px; }
+		&.__order_9{ top : 480px; left : 480px; }
+	}
+	
+	&__frame{
+		position: relative;
+		top: -750px;
+		left: -350px;
+		width: 700px;
+		height: 700px;
+		transform: rotateX(40deg);
+		transform-origin: bottom;
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+		transition : transform 500ms ease-in-out;
+		
+	}
+	&__frame.is-active{
+		transform: rotateX(0deg);
+	}
+	&__frame.is-active > &__panel{
+		background-color: rgba(34, 96, 214, 0.7);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

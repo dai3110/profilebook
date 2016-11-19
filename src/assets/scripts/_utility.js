@@ -1,0 +1,1 @@
+window.ProfileBook = window.ProfileBook || {};(function(){	window.ProfileBook.util = {		queryEach : function(query, func){			var elements = document.querySelectorAll(query);			for(var i=0; i<elements.length; i++){				(function(elm){					func(elm);				})(elements[i]);			}		}	};})();

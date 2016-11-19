@@ -1,0 +1,1 @@
+window.ProfileBook = window.ProfileBook || {};window.ProfileBook.config = {	menu : {		activeClassName : "is-active"	}		};

@@ -1,1 +1,1 @@
-(function(){	console.log("test");})();
+window.ProfileBook = window.ProfileBook || {};document.addEventListener("DOMContentLoaded", function(){	ProfileBook.util.queryEach(".c-main_menu__frame", ProfileBook.setupMenu);}, false);
