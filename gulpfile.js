@@ -14,13 +14,14 @@ gulp.task('scripts', function() {
   return gulp.src([
    'src/assets/scripts/_config.js',
    'src/assets/scripts/_utility.js',
+   'src/assets/scripts/_logo_texture.js',
    'src/assets/scripts/_menu_panel.js',
    'src/assets/scripts/main.js'
   ])
     .pipe(modules.sourcemaps.init())
     .pipe(modules.concat('main.js'))
     .pipe(modules.sourcemaps.write())
-    .pipe(uglify({preserveComments: 'some'}))
+//    .pipe(uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('htdocs/assets/scripts'))
 });
 gulp.task('build', [
