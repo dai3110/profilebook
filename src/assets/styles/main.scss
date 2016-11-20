@@ -30,13 +30,13 @@ BODY{
 		content : '';
 		display : block;
 		width : 100%;
-		height : 40px;
+		height : 20px;
 	}
 	& > MAIN{
 		position : relative;
 		perspective: 2000px;
 		width : 100%;
-		height : calc(100% - 80px);
+		height : calc(100% - 40px);
 	}
 }
 
@@ -45,7 +45,7 @@ BODY{
 	background-size : cover;
 	background-position : center;
 	overflow : hidden;
-	width : 100%;
+	width : calc(100% - 40px);
 	height : 100%;
 	transform-origin : center;
 	transform : rotateY(0deg);
@@ -53,10 +53,10 @@ BODY{
 	-webkit-backface-visibility : hidden;
 	position : absolute;
 	top : 0px;
-	left : 0px;
+	left : 20px;
 	transition : transform 1000ms ease-in-out;
 	overflow : hidden;
-	box-shadow : 8px 8px 8px 8px rgba(0,0,0,0.2);
+	box-shadow : 8px 8px 3px 3px rgba(0,0,0,0.2);
 }
 
 .u-linklabel{
@@ -156,6 +156,7 @@ BODY{
 			text-decoration: none;
 			text-align : center;
 			text-shadow: -1px -1px 0px rgba(13,55,98,1);
+			pointer-events : none;
 			
 			& > .u-linklabel{
 				position : absolute;
@@ -204,6 +205,9 @@ BODY{
 	}
 	&__frame.is-active > &__panel{
 		background-color: rgba(34, 96, 214, 0.7);
+		& > A{
+			pointer-events : auto;
+		}
 		
 		&.__main{
 			background-color: rgba(255, 255, 255, 0.7);
@@ -220,19 +224,15 @@ BODY{
 .c-texture_logo{
 	position: absolute;
 	display: inline-block;
-	width: 580px;
+	width: 600px;
 	height : 120px;
 	top: 15%;
-	left: calc(50% - 555px / 2);
+	left: calc(50% - 600px / 2);
 	z-index : 2;
 	white-space : nowrap;
 	pointer-events : none;
 	
 	&__text{
-/*
-		font-family: 'Sarala';
-		letter-spacing : 10px;
-*/
 		font-size : 5.5rem;
 		display : inline-block;
 		width :auto;
@@ -253,7 +253,7 @@ BODY{
 	background-image : url('../../images/monobg.jpg');
 	background-size : cover;
 	background-position : center;
-	width : 100%;
+	width : calc(100% - 40px);
 	height : 100%;
 	transform-origin : center;
 	transform : rotateY(-180deg);
@@ -261,11 +261,11 @@ BODY{
 	-webkit-backface-visibility : hidden;
 	position : absolute;
 	top : 0px;
-	left : 0px;
+	left : 20px;
 	color : #FFFFFF;
 	background-color : rgb(100,100,100);
 	transition : transform 1000ms ease-in-out;
-	box-shadow : 8px 8px 8px 8px rgba(0,0,0,0.2);
+	box-shadow : 8px 8px 3px 3px rgba(0,0,0,0.2);
 }
 
 
