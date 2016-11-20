@@ -8,7 +8,7 @@ gulp.task('styles', function () {
     .pipe(modules.sass({outputStyle: 'compressed'}).on('error', modules.sass.logError))
     .pipe(modules.sourcemaps.write())
     .pipe(modules.sourcemaps.write('./'))
-    .pipe(gulp.dest('htdocs'))
+    .pipe(gulp.dest('docs'))
 });
 gulp.task('scripts', function() {
   return gulp.src([
@@ -23,7 +23,7 @@ gulp.task('scripts', function() {
     .pipe(modules.concat('main.js'))
     .pipe(modules.sourcemaps.write())
 //    .pipe(uglify({preserveComments: 'some'}))
-    .pipe(gulp.dest('htdocs/assets/scripts'))
+    .pipe(gulp.dest('docs/assets/scripts'))
 });
 gulp.task('build', [
   'scripts',
