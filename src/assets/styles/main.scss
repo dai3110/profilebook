@@ -68,12 +68,32 @@ BODY{
 	width: 10px;
 	height: 10px;
 	border-radius: 5px;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.8);
 	box-shadow: 1px 2px 1px 1px rgba(126, 165, 212, 0.4);
-	opacity: 0.6;
+	opacity: 0.8;
 	transform : rotate(0deg);
 	transition : all 1111ms linear;
 	pointer-events : none;
+	
+	&.is-active{
+		opacity: 0;
+		transition : all 777ms linear;
+	}
+}
+
+.u-sub_text{
+	position: relative;
+	display: inline-block;
+	min-width : 1.2rem;
+	width : auto;
+	height : auto;
+	color: rgba(255, 255, 255, 0.7);
+	font-size : 1.5rem;
+	font-family : 'Sarala';
+	transform : rotate(0deg);
+	transition : all 1111ms linear;
+	pointer-events : none;
+	text-shadow: 1px 2px 1px rgba(126, 165, 212, 0.4);
 	
 	&.is-active{
 		opacity: 0;
@@ -202,7 +222,7 @@ BODY{
 	display: inline-block;
 	width: 580px;
 	height : 120px;
-	top: 200px;
+	top: 15%;
 	left: calc(50% - 555px / 2);
 	z-index : 2;
 	white-space : nowrap;
@@ -221,6 +241,11 @@ BODY{
 			content : attr(data-logo-text);
 			color : rgba(0,0,0,0);
 		}
+	}
+	
+	&__subtitle{
+		text-align: center;
+		letter-spacing : 0.8rem;
 	}
 }
 
