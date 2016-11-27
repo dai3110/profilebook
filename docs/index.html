@@ -25,42 +25,245 @@
 
 				<nav class="c-main_menu">
 					<ul class="c-main_menu__frame">
-						<li class="c-main_menu__panel __order_1" data-icon="&#xf13b">
-							<a href="#article_test"><span class="u-linklabel">HTML</span></a>
+						<li class="c-main_menu__panel __order_1 __ico_fi __ico-small" data-icon="&#xf171">
+							<a href="#article_works_cs"><span class="u-linklabel">Works<br>Corporate Site</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_2" data-icon="&#xf13c">
-							<a href="#article_test"><span class="u-linklabel">CSS</span></a>
+						<li class="c-main_menu__panel __order_2 __ico_fa" data-icon="&#xf02d">
+							<a href="#article_works_bk"><span class="u-linklabel">Works<br>BookOS UIβ</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_3" data-icon="&#xf1cc">
-							<a href="#article_test"><span class="u-linklabel">JavaScript</span></a>
+						<li class="c-main_menu__panel __order_3 __ico_fi" data-icon="&#xf17a">
+							<a href="#article_works_jp"><span class="u-linklabel">Works<br>JP Promotion</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_4" data-icon="&#xf017">
-							<a href="#article_test"><span class="u-linklabel">My History</span></a>
+						<li class="c-main_menu__panel __order_4 __ico_fa" data-icon="&#xf03e">
+							<a href="#article_works_mt"><span class="u-linklabel">Works<br>Masking Tool</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_5 __main" data-icon="&#xf183">
-							<a href="#article_test"><span class="u-linklabel">About Me</span></a>
+						<li class="c-main_menu__panel __order_5 __ico_fa __main" data-icon="&#xf183">
+							<a href="#article_about_me"><span class="u-linklabel">About Me</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_6" data-icon="&#xf080">
-							<a href="#article_test"><span class="u-linklabel">Web Marketing</span></a>
+						<li class="c-main_menu__panel __order_6 __ico_fa" data-icon="&#xf084">
+							<a href="#article_works_cp"><span class="u-linklabel">Works<br>JS Captcha</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_7" data-icon="&#xf03e">
-							<a href="#article_test"><span class="u-linklabel">Graphics</span></a>
+						<li class="c-main_menu__panel __order_7 __ico_fa __sub" data-icon="&#xf13b">
+							<a href="#article_tech_front"><span class="u-linklabel __font-small">Front-end<br>Technical Remarks</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_8" data-icon="&#xf09b">
-							<a href="#article_test"><span class="u-linklabel">Environment</span></a>
+						<li class="c-main_menu__panel __order_8 __ico_fa __sub" data-icon="&#xf09b">
+							<a href="#article_tech_develop"><span class="u-linklabel __font-small">Development<br>Environment</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_9" data-icon="&#xf19a">
-							<a href="#article_test"><span class="u-linklabel">Backends</span></a>
+						<li class="c-main_menu__panel __order_9 __ico_fa __sub __ico-small" data-icon="&#xf19a">
+							<a href="#article_tech_back"><span class="u-linklabel __font-small">Back-end<br>Technical Remarks</span></a>
 						</li>
 					</ul>
 				</nav>
 			</header>
 			
-			<article class="c-content_panel" id="article_test">
-				<a href="#top">back</a>
-				<h1>テスト</h1>
-				test
+			<article class="c-content_panel" id="article_works_cs">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>Works - Corporate Site</h1>
+						<p>コーディングに関わったコーポレートサイトのうち、2016年現在の直近のものをご紹介いたします。</p>
+					</header>
+					
+					<section>
+						<h1>六本木ヒルズ</h1>
+
+						<figure class="u-paragraph_image __float_left">
+							<img src="./images/cs_01.jpg">
+						</figure>
+						<dl>
+							<dt>URL</dt>
+							<dd>
+								http://ropongihills.com/<br>
+								<span class="__thin">(アクセス解析への影響のため、お手数おかけいたしますがURLは手動で入力して下さい)</span>
+							</dd>
+							<dt>担当業務</dt>
+							<dd>
+								<ul>
+									<li>JavaScriptコーディング(全範囲)</li>
+									<li>一部のCSS, HTMLコンポーネント作成</li>
+								</ul>
+								<span class="__thin">(引き継ぎ済であり、その後に改修の入っている箇所もあります)</span>
+							</dd>
+							<dt>コーディング形態</dt>
+							<dd>
+								<ul>
+									<li>jQuery, vue.js 使用</li>
+									<li>アニメーションや特殊UIはスクラッチでの開発</li>
+									<li>開発期間40日程度＋公開後に断続的な改修</li>
+								</ul>
+							</dd>
+						</dl>
+						<figure class="u-paragraph_image __float_right">
+							<img src="./images/cs_02.jpg">
+						</figure>
+						<p>
+							特殊なUIを多く含むものの、開発期間が限られてライブラリを選択する時間的な余裕も難しかったこともあり、
+							jQueryは要素選択やCSS操作程度に使用、JSテンプレートエンジンはvue.jsを使用、それ以外については ほぼスクラッチでの開発となりました。
+						</p>
+						<p>
+							開発当初のトップページは HTML記述の可能な巨大なカルーセルを使用し、ナビゲーションをその上に被せて表示するものだったため、非常に難易度の高いコーディング技術が要求されました。その際、ロゴのSVGが背景色に溶け込むなどの影響もあり、canvasで動的に平均色を割り出した色範囲に対応してロゴを入れ替えるなどの処理も加えました。
+							リリース直前に仕様が変わって余白の多いデザインに代わりましたが、アニメーションタイプや各サイズの設定値をまとめた汎用的なつくりにしていたため、頻繁な仕様変更に対応可能な構成になっています。
+						</p>
+						<p>
+							特殊UIとして特筆すべきものに「フロアマップ」が挙げられます。<br>
+							(http://www.roppongihills.com/floor_map/keyakizaka_dohri.html など)<br>
+							GoogleMapsと同様の操作感を実現した画像ビューアが必要とされ、アニメーション付きズーム（ピンチイン・ピンチアウト）や慣性を効かせたスクロール、特定の座標へのピン表示など、すべてスクラッチで作成しました。（座標変換や指数対数計算などが絡み、数学的にも難しいものでした）
+						</p>
+					</section>
+
+					<footer>
+						<p>その他、業務系コーディングについては<a href="#article_about_me">About Me</a>をご参照ください</p>
+					</footer>
+
+				</div>
 			</article>
+			
+			<article class="c-content_panel" id="article_works_bk">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>Works - BookOS UIβ</h1>
+						<p>コンテストに出展した OS風サイトでの小説閲覧サイト「山猫文庫」をご紹介いたします。</p>
+					</header>
+					
+					<section>
+						<h1>山猫文庫</h1>
+						<figure class="u-paragraph_image __float_left">
+							<img src="./images/bk_01.jpg"><br><br>
+							<img src="./images/bk_02.jpg">
+						</figure>
+						<dl>
+							<dt>URL</dt>
+							<dd>
+								<a href="http://ihatov.moon-bow.net/" target="_blank">http://ihatov.moon-bow.net/</a>
+							</dd>
+							<dt>担当範囲</dt>
+							<dd>
+								コンテンツ用画像を除く全域<span class="__thin">（コンテンツ画像は妻が担当）</span>
+							</dd>
+							<dt>コーディング形態</dt>
+							<dd>
+								<ul>
+									<li>コーディング期間５日程度（コードは非常に雑です）</li>
+									<li>Back-endではWordPressを使用。</li>
+									<li>Front-endではJavaScriptをフルスクラッチで記述。</li>
+								</ul>
+							</dd>
+							<dt>仕様面の特徴</dt>
+							<dd>
+								
+							</dd>
+						</dl>
+					
+					</section>
+				</div>
+			</article>
+			
+			<article class="c-content_panel" id="article_works_jp">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>Works - JP Promotion</h1>
+						<p></p>
+					</header>
+					
+					<section>
+						<dl>
+							<dt>URL</dt>
+							<dd>
+								<a href="http://jpculture.moon-bow.net/" target="_blank">http://jpculture.moon-bow.net/</a>
+							</dd>
+						</dl>
+					
+					</section>
+				</div>
+			</article>
+			
+			<article class="c-content_panel" id="article_works_mt">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>Works - Masking Tool</h1>
+						<p></p>
+					</header>
+					
+					<section>
+						<dl>
+							<dt>URL</dt>
+							<dd>
+								<a href="https://dai3110.github.io/alpha_jpg/" target="_blank">https://dai3110.github.io/alpha_jpg/</a>
+							</dd>
+						</dl>
+					
+					</section>
+				</div>
+			</article>
+			
+			<article class="c-content_panel" id="article_about_me">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>About Me</h1>
+						<p></p>
+					</header>
+					
+					<section>
+					
+					</section>
+				</div>
+			</article>
+			
+			<article class="c-content_panel" id="article_works_cp">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>Works - JS Captcha</h1>
+						<p></p>
+					</header>
+					
+					<section>
+					
+					</section>
+				</div>
+			</article>
+			
+			<article class="c-content_panel" id="article_tech_front">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>Front-end Technical Remarks</h1>
+						<p></p>
+					</header>
+					
+					<section>
+					
+					</section>
+				</div>
+			</article>
+			
+			<article class="c-content_panel" id="article_tech_develop">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>Development Environment</h1>
+						<p></p>
+					</header>
+					
+					<section>
+					
+					</section>
+				</div>
+			</article>
+			
+			<article class="c-content_panel" id="article_tech_back">
+				<div class="c-content_panel__main">
+					<header>
+						<h1>Back-end Technical Remarks</h1>
+						<p></p>
+					</header>
+					
+					<section>
+					
+					</section>
+				</div>
+			</article>
+
+			<nav>
+				<a href="#top" id="link2top" class="c-anchor__to_top" title="トップへ"></a>
+			</nav>
+			
 		</main>
 <!--
 http://wegraphics.net/downloads/free-stained-canvas-backgrounds/

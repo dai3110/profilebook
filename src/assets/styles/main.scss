@@ -1,9 +1,66 @@
 @font-face {
 	font-family: 'FontAwesome';
 	src: url('../../assets/fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
-	src: url('../../assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../../assets/fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../../assets/fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../../assets/fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../../assets/fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	src: url('../../assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+		 url('../../assets/fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+		 url('../../assets/fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+		 url('../../assets/fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+		 url('../../assets/fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
 	font-weight: normal;
 	font-style: normal;
+}
+
+@font-face {
+  font-family: "foundation-icons";
+  src: url("../../assets/fonts/foundation-icons/foundation-icons.eot");
+  src: url("../../assets/fonts/foundation-icons/foundation-icons.eot?#iefix") format("embedded-opentype"),
+       url("../../assets/fonts/foundation-icons/foundation-icons.woff") format("woff"),
+       url("../../assets/fonts/foundation-icons/foundation-icons.ttf") format("truetype"),
+       url("../../assets/fonts/foundation-icons/foundation-icons.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Regular");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Regular");
+  font-weight: 200;
 }
 
 *{
@@ -30,15 +87,31 @@ BODY{
 		content : '';
 		display : block;
 		width : 100%;
-		height : 20px;
+		@media screen and (max-width:480px){
+			height : 10px;
+		}
 	}
 	& > MAIN{
 		position : relative;
 		perspective: 2000px;
-		width : 100%;
+		max-width : 1000px;
+		width : calc(100% - 60px);
 		height : calc(100% - 40px);
+		margin : 0px auto;
+		left : -20px;
+		
+		@media screen and (max-width:480px){
+			width : calc(100% - 20px);
+			height : calc(100% - 20px);
+			left : 0px;
+		}
 	}
 }
+
+P{
+	word-break: break-all;
+}
+
 
 #head_panel{
 	background-image : url('../../images/bg.jpg');
@@ -57,7 +130,29 @@ BODY{
 	transition : transform 1000ms ease-in-out;
 	overflow : hidden;
 	box-shadow : 8px 8px 3px 3px rgba(0,0,0,0.2);
+	pointer-events : none;
+	
+	@media screen and (max-width:480px){
+		width : 100%;
+		left : 0px;
+	}
+	
+	&.is-shown{
+		& .c-main_menu{
+			opacity : 1;
+		}
+	}
+	&.is-current{
+		pointer-events : auto;
+	}
 }
+
+UL{
+	margin : 0px;
+	padding : 0px;
+	list-style-type: none;
+}
+
 
 .u-linklabel{
 	display : inline;
@@ -72,12 +167,12 @@ BODY{
 	box-shadow: 1px 2px 1px 1px rgba(126, 165, 212, 0.4);
 	opacity: 0.8;
 	transform : rotate(0deg);
-	transition : all 1111ms linear;
+	transition : all 777ms linear 0ms;
 	pointer-events : none;
 	
 	&.is-active{
 		opacity: 0;
-		transition : all 777ms linear;
+		transition : all 1111ms linear 77ms;
 	}
 }
 
@@ -91,13 +186,13 @@ BODY{
 	font-size : 1.5rem;
 	font-family : 'Sarala';
 	transform : rotate(0deg);
-	transition : all 1111ms linear;
+	transition : all 777ms linear 0ms;
 	pointer-events : none;
 	text-shadow: 1px 2px 1px rgba(126, 165, 212, 0.4);
 	
 	&.is-active{
 		opacity: 0;
-		transition : all 777ms linear;
+		transition : all 1111ms linear 111ms;
 	}
 }
 
@@ -112,6 +207,8 @@ BODY{
 	perspective: 500px;
 	perspective-origin: bottom;
 	z-index : 1;
+	opacity : 0;
+	transition : opacity 0s linear 500ms;
 	
 	&__panel{
 		position: absolute;
@@ -134,15 +231,32 @@ BODY{
 		
 		&::before{
 			content: attr(data-icon);
-			font-family: 'FontAwesome';
 			display : block;
 			width : 100%;
-			margin-top : 30px;
-			height : 150px;
-			font-size : 12rem;
+			margin-top : 25px;
+			height : 120px;
+			line-height : 120px;
+			font-size : 11rem;
 			text-align : center;
 			text-shadow: -1px -1px 1px rgba(13, 55, 98, 0.8),1px 1px 1px rgba(255,255,255,0.7);
 			pointer-events : none;
+		}
+		
+		&.__ico_fa::before{
+			font-size : 9.5rem;
+			font-family: 'FontAwesome';
+		}
+		&.__ico_fa.__ico-small::before{
+			font-size : 9.0rem;
+		}
+		
+		
+		&.__ico_fi::before{
+			font-size : 10.5rem;
+			font-family: 'foundation-icons';
+		}
+		&.__ico_fi.__ico-small::before{
+			font-size : 9.5rem;
 		}
 		
 		& >A{
@@ -151,7 +265,6 @@ BODY{
 			height : 100%;
 			left : 0px;
 			bottom : 0px;
-			font-size : 2.5rem;
 			font-family: 'Nunito';
 			text-decoration: none;
 			text-align : center;
@@ -165,12 +278,18 @@ BODY{
 				left : 0px;
 				bottom : 20px;
 				display : inline-block;
+				font-size : 2.3rem;
+				line-height: 2.5rem;
+				
+				&.__font-small{
+					font-size : 2.1rem;
+				}
 			}
 		}
 		
 		& >A,
 		&::before{
-			opacity : 0.5;
+			opacity : 0.7;
 			color: rgb(255, 255, 255);
 			transition : color 500ms ease-in-out;
 		}
@@ -181,6 +300,16 @@ BODY{
 			& > A,
 			&::before{
 				color : rgb(118, 168, 247);
+				text-shadow: none;
+			}
+		}
+		
+		&.__sub{
+			background-color: rgba(94, 168, 251, 0.4);
+			box-shadow: inset 0px 0px 12px 8px rgba(255,255,255,0.4);
+			& > A,
+			&::before{
+				color: rgb(255, 255, 255);
 				text-shadow: none;
 			}
 		}
@@ -204,7 +333,7 @@ BODY{
 		transform: rotateX(0deg);
 	}
 	&__frame.is-active > &__panel{
-		background-color: rgba(34, 96, 214, 0.7);
+		background-color: rgba(97, 145, 238, 0.7);
 		& > A{
 			pointer-events : auto;
 		}
@@ -215,6 +344,14 @@ BODY{
 			& > A,
 			&::before{
 				color: rgb(10, 79, 187);
+			}
+		}
+		&.__sub{
+			background-color: rgba(25, 83, 194, 0.7);
+			box-shadow: inset 0px 0px 12px 8px rgba(255,255,255,0.4);
+			& > A,
+			&::before{
+				color: rgb(255, 255, 255);
 			}
 		}
 	}
@@ -263,14 +400,229 @@ BODY{
 	top : 0px;
 	left : 20px;
 	color : #FFFFFF;
-	background-color : rgb(100,100,100);
-	transition : transform 1000ms ease-in-out;
+	transition : all 1000ms ease-in-out;
 	box-shadow : 8px 8px 3px 3px rgba(0,0,0,0.2);
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+	pointer-events : none;
+	
+	@media screen and (max-width:480px){
+		width : 100%;
+		left : 0px;
+	}
+	
+	&.is-current{
+		pointer-events : auto;
+	}
+	
+	&__main{
+		width : 100%;
+		height : 100%;
+		overflow : auto;
+		background-color: rgba(255,255,255,0.85);
+	//	-webkit-overflow-scrolling : touch;
+		
+		& > HEADER{
+			padding: 10px;
+			
+			& > H1{
+				margin: 0px 10px;
+				padding: 10px;
+				font-size: 3.2rem;
+				border-style: solid;
+				border-color: rgba(0,0,0,0.2);
+				border-width: 0px 0px 1px 0px;
+				box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.9);
+				text-align: center;
+				color: rgba(0, 0, 0, 0.8);
+				text-shadow: 0px 0px 1px rgb(255, 255, 255), 3px 3px 0px rgba(0, 0, 0, 0.17);
+				
+				
+				@media screen and (max-width:480px){
+					font-size: 1.8rem;
+					padding: 10px 0px;
+				}
+			}
+			
+			& > P{
+				margin: 20px 20px 0px 20px;
+				color: rgba(0, 0, 0, 0.8);
+				font-size : 1.3rem;
+				letter-spacing: 1px;
+				
+				@media screen and (max-width:480px){
+					font-size: 1.2rem;
+					margin: 20px 10px 0px 10px;
+				}
+			}
+		}
+		& > FOOTER{
+			margin: 0px 20px;
+			border-style: solid;
+			border-color: rgba(255,255,255,0.9);
+			border-width: 1px 0px 0px 0px;
+			box-shadow: 0px -1px 0px 0px rgba(0,0,0,0.2);
+			
+			& > P{
+				margin: 20px 0px;
+				color: rgba(0, 0, 0, 0.8);
+				font-size : 1.3rem;
+				letter-spacing: 1px;
+				
+				@media screen and (max-width:480px){
+					line-height: 2.0rem;
+					font-size: 1.2rem;
+					letter-spacing: 0px;
+				}
+			}
+		}
+		
+		& > SECTION{
+			padding: 10px;
+			font-size : 1.3rem;
+			line-height : 2.5rem;
+			
+			& > H1{
+				margin: 0px 20px;
+				padding: 10px;
+				font-size: 2.2rem;
+				color: rgba(0, 0, 0, 0.8);
+				text-shadow: 0px 0px 1px rgb(255, 255, 255), 3px 3px 0px rgba(0, 0, 0, 0.17);
+				
+				@media screen and (max-width:480px){
+					font-size: 1.5rem;
+					margin: 0px 10px;
+				}
+			}
+			& > H2{
+				font-size: 1.6rem;
+				font-weight: bold;
+				display: inline-block;
+				border-style: double;
+				border-width: 0px 0px 3px 0px;
+				border-color: rgba(0,0,0,0.5);
+				padding: 0px;
+				line-height: 2.0rem;
+				margin-bottom: 0.8rem;
+			}
+			
+			& > P{
+				margin: 10px 20px 20px 20px;
+				color: rgba(0, 0, 0, 0.8);
+				letter-spacing: 1px;
+				
+				@media screen and (max-width:480px){
+					line-height: 2.0rem;
+					font-size: 1.2rem;
+					letter-spacing: 0px;
+				}
+			}
+			
+			& > DL{
+				margin: 0px 20px;
+				color: rgba(0, 0, 0, 0.8);
+				overflow: hidden;
+				
+				& > DT{
+					font-size: 1.6rem;
+					font-weight: bold;
+					display: inline-block;
+					border-style: double;
+					border-width: 0px 0px 3px 0px;
+					border-color: rgba(0,0,0,0.5);
+					padding: 0px;
+					line-height: 2.0rem;
+					margin-bottom: 0.8rem;
+					
+					@media screen and (max-width:480px){
+						font-size: 1.3rem;
+						margin-top: 10px;
+					}
+				}
+				& > DD{
+					margin : 0px 0px 15px 20px;
+					font-size: 1.2rem;
+					
+					@media screen and (max-width:480px){
+						margin: 0px 0px 10px 0px;
+					}
+				}
+				
+			}
+			
+			& .__thin{
+				font-size : 1.1rem;
+				@media screen and (max-width:480px){
+					font-size : 1.0rem;
+				}
+			}
+		}
+	}
 }
 
+.u-paragraph_image{
+	& > IMG{
+		width : auto;
+		max-width : 100%;
+		height : auto;
+		box-shadow: 6px 6px 1px 1px rgba(0,0,0,0.15);
+	}
+	
+	&.__float_left{
+		margin: 0px 30px 20px 20px;
+		float : left;
+		
+		@media screen and (max-width:480px){
+			margin: 0px 10px 15px 10px;
+			float : none;
+		}
+	}
+	
+	&.__float_right{
+		margin: 0px 25px 20px 30px;
+		float : right;
+		
+		@media screen and (max-width:480px){
+			margin: 0px 10px 15px 10px;
+			float : none;
+		}
+	}
+}
 
-
-
+.c-anchor{
+	&__to_top{
+		display : block;
+		position : absolute;
+		right : -40px;
+		bottom : 0px;
+		border-radius : 4px;
+		width : 36px;
+		height : 36px;
+		background-color : rgba(0,0,0,0.4);
+		text-align : center;
+		color : rgba(255,255,255,0.8);
+		text-decoration : none;
+		font-size : 28px;
+		line-height : 36px;
+		opacity : 1;
+		transition : opacity 1000ms linear;
+		
+		&::before{
+			content : '\f060';
+			font-family: 'FontAwesome';
+		}
+		
+		&.is-hidden{
+			opacity : 0;
+			pointer-events : none;
+		}
+		
+		@media screen and (max-width:480px){
+			position : fixed;
+			bottom : 15px;
+			right : 15px;
+		}
+	}
+}
 
 
 
