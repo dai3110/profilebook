@@ -93,6 +93,7 @@ BODY{
 		}
 	}
 	& > MAIN{
+		display : block;
 		position : relative;
 		perspective: 2000px;
 		width : calc(100% - 60px);
