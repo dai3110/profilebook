@@ -5,6 +5,10 @@
 		<link rel="stylesheet" href="./assets/styles/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Sarala" rel="stylesheet">
+		<link href="./assets/libs/syntaxhighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/libs/syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="./assets/libs/syntaxhighlighter/scripts/shCore.js"></script>
+		<script type="text/javascript" src="./assets/libs/syntaxhighlighter/scripts/shBrushJScript.js"></script>
 		<script type="text/javascript" src="./assets/scripts/main.js"></script>
 		
 	</head>
@@ -39,7 +43,7 @@
 							<a href="#article_works_mt"><span class="u-linklabel">Works<br>Masking Tool</span></a>
 						</li>
 						<li class="c-main_menu__panel __order_5 __ico_fa __main" data-icon="&#xf183">
-							<a href="#article_about_me"><span class="u-linklabel">About Me</span></a>
+							<a href="#article_about_me"><span class="u-linklabel">This Site<br>and Me</span></a>
 						</li>
 						<li class="c-main_menu__panel __order_6 __ico_fa" data-icon="&#xf084">
 							<a href="#article_works_cp"><span class="u-linklabel">Works<br>JS Captcha</span></a>
@@ -123,7 +127,7 @@
 				<div class="c-content_panel__main">
 					<div class="c-content_panel__wrap">
 						<header>
-							<h1>Works - BookOS UIβ</h1>
+							<h1>Works - BookOS UI β</h1>
 							<p>コンテストに出展した OS風サイトでの小説閲覧サイト「山猫文庫」をご紹介いたします。</p>
 						</header>
 						
@@ -160,7 +164,10 @@
 									</ul>
 								</dd>
 							</dl>
-						
+							<p>
+								縦書きデザインのコンテストへの出展のため、CSSの縦書きモジュールを使用することが必須となり、加えて、リフロー処理にCSSのcolumnsを使用しているため、表示処理速度は非常に遅いものとなってしまいました。<br>
+								そのため、電子書籍の形態としては β版として考えています。
+							</p>
 						</section>
 					</div>
 				</div>
@@ -171,23 +178,46 @@
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Works - JP Promotion</h1>
-							<p></p>
+							<p>コンテストに出展した 絵巻物風インターフェイスの日本文化紹介サイトです。</p>
 						</header>
 						
 						<section>
 							<figure class="u-paragraph_image __float_left">
-								<img src="./images/jp_01.jpg">
+								<img src="./images/jp_01.jpg"><br><br>
+								<img src="./images/jp_02.jpg">
 							</figure>
 							<dl>
 								<dt>URL</dt>
 								<dd>
 									<a href="http://jpculture.moon-bow.net/" target="_blank">http://jpculture.moon-bow.net/</a>
 								</dd>
+								<dt>担当範囲</dt>
+								<dd>
+									コーディング全範囲<span class="__thin">（テキスト・画像は事務局からの提示コンテンツ）</span>
+								</dd>
+								<dt>コーディング形態</dt>
+								<dd>
+									<ul>
+										<li>コーディング期間７日程度（コードは非常に雑です）</li>
+										<li>静的HTMLとして作成。コンテンツは、素のテキストにセクショニング要素等を追加。</li>
+										<li>UIに関してJavaScriptを使用。フルスクラッチで記述。</li>
+									</ul>
+								</dd>
+								<dt>仕様面の特徴</dt>
+								<dd>
+									<ul>
+										<li>日本文化をテーマとしているため、日本語が読めなくても雰囲気である程度の内容が伝わるよう、絵巻物風のインターフェイスを作成して使用しています。</li>
+										<li>序章と各論３章を合わせた４つのセクションに対して、それぞれを１つのパネルとし、横スクロールのアコーディオンを使用して表示しています。</li>
+										<li>日本文化のイメージを具体化するため、UIにリアリティを持たせるよう画像素材をCSSに併用, 裏地に透けた文字をCSSで表すなど工夫をしています。</li>
+										<li>時系列に関連するコンテンツについては、パネル内でパララックス効果を持たせ、グラデュアルな時間変化を表現しています。</li>
+										<li>（要件には挙がっていませんでしたが）レスポンシブ対応済みです。</li>
+									</ul>
+								</dd>
 							</dl>
-							<figure class="u-paragraph_image __float_right">
-								<img src="./images/jp_02.jpg">
-							</figure>
-						
+							<p>
+								コンテストの「課題部門」だったためコンテンツの縛りがあり、レイアウトに苦戦しました。
+								また、縦書きコンテンツを含む場合のレスポンシブ対応は ブラウザ側の表示仕様の差異の影響を大きく受け（columns使用時のheightに関する解釈の差が大きい）、ブレイクポイントに画面の高さも考慮しているため、コンテンツの表示調整に一番工数が掛かりました。<br>
+								コンテストの協賛業者や審査員のリストが、出版等タイポグラフィに拘りの強い傾向があったため、CSSのtransform:rotateを使用して MS明朝のようなジャギーの発生するフォントでも見た目に耐えられる表示にしました。
 						</section>
 					</div>
 				</div>
@@ -198,7 +228,7 @@
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Works - Masking Tool</h1>
-							<p></p>
+							<p>ファイルサイズの大きな半透過PNGファイルをWebで使用したい場合に、アルファマスクと本体の２枚のJPG画像に分け、大幅にファイルサイズを落としてWeb上で表示するためのツールです。</p>
 						</header>
 						
 						<section>
@@ -210,8 +240,356 @@
 								<dd>
 									<a href="https://dai3110.github.io/alpha_jpg/" target="_blank">https://dai3110.github.io/alpha_jpg/</a>
 								</dd>
+								<dt>担当範囲</dt>
+								<dd>
+									ライブラリを除く全範囲
+								</dd>
+								<dt>コーディング形態</dt>
+								<dd>
+									<ul>
+										<li>半透過の写真素材をCSSに使用したかった経緯のため、１日で作成。その後、しばしば微修正。</li>
+										<li>画像データの処理にサーバーは介さず、静的なHTMLとして作成。</li>
+										<li>バイナリ処理も含めてJavaScriptを使用。zip書庫作成とファイル保存の機能に関してはライブラリを使用。それ以外はスクラッチで記述。</li>
+									</ul>
+								</dd>
+								<dt>仕様面の特徴</dt>
+								<dd>
+									<ul>
+										<li>canvas要素を生成してマスター画像のデータを読み込み、RGBデータのみのJPG画像 と AlphaチャネルをRGBに変換したJPG画像 とに分ける処理をブラウザ上で実行しています。</li>
+										<li>生成した２枚のJPG画像のblobデータとサンプル用のテキストファイルを、ライブラリ経由で書庫化、ローカルに保存することができます。</li>
+									</ul>
+								</dd>
 							</dl>
-						
+						</section>
+						<section>
+							<p>
+								開発コーディング サンプルも兼ねて、こちらにてJSのコーディングパターンを記載いたします。
+							</p>
+							<dl>
+								<dt>タスクランナー</dt>
+								<dd>現在は主に gulp を使用しています。(sassを使用しない程度の規模の画面の場合は、JSも生で記述することが多いです)
+								<dt>エディター</dt>
+								<dd>業務上の問題が発生しない場合は、IDEは使用せずに サクラエディタ のような動作の軽いテキストエディタで済ませます。</dd>
+								<dt>JSライブラリ等</dt>
+								<dd>
+									<ul>
+										<li>要件として望まれている場合は jQueryなどのライブラリを使用することもありますが、特に個人案件の場合、基本的には 素のJavaScriptで記述します。</li>
+										<li>altJSについても、要件として必要な場合以外は使用していません。（特に coffeeScriptは、スコープがJavaScriptと異なるため、意図しないバグを回避するためにも滅多に使いません）</li>
+										<li>JSのMVCモデルは（数年前は個人的に極端にこだわっていましたが）、かえってメンテナンスがしづらくなるケースが多いため、今はあまりモデル分割をせずに作成しています。</li>
+									</ul>
+								</dd>
+								<dt>JSコーディングパターン</dt>
+								<dd>
+									<ul>
+										<li>window直下の変数汚染, 重複する変数による不具合の発生防止（特にloop時のクロージャの使用）, 疑似的なインスタンスの作成 等の点から、無名関数を多用します。</li>
+										<li>異常系処理では一旦 exception を throw するようにし、エラーを確認しやすいコードを維持します。（特にjQueryを使用する場合は、取得要素のlengthを毎回意識します）</li>
+										<li>規模の大きいプロジェクトの場合、設定値や文字列等はconfig用のJSを分けて作成し、その各値の意味が分かる記述をします。また、処理にHTMLの要素が絡むものについては メインの初期化処理内にクラス名やクエリを集約します。</li>
+									</ul>
+								</dd>
+							</dl>
+<pre class="brush: js">
+/*
+Masking Toolに使用しているJavaScriptコードです。
+（gulpでuniflyし出力したコード）
+*/
+
+
+// _util.js
+// 全般で使用する関数, Exceptionの管理, 外部ライブラリのwrappingなど
+
+window.AlphaJpgApp = window.AlphaJpgApp || {};
+
+(function(){
+    var HeredocTypeException = function(value){
+        this.value = value.toString();
+        this.message = "Heredoc argument requires as a function contains a block comment.";
+        this.toString = function(){
+            return this.message + "\n" + this.value;
+        };
+    };
+    
+    var HeredocSyntaxException = function(value){
+        this.value = value.toString();
+        this.message = "Heredoc argument must contain a block comment.";
+        this.toString = function(){
+            return this.message + "\n" + this.value;
+        };
+    };
+
+    window.AlphaJpgApp.util = {
+        heredoc : function(exp, trimIndent){
+            var commentExp = { start : "/*", end : "*/" };
+            if(typeof exp != "function"){
+                throw new HeredocTypeException(exp);
+            }
+            var docContent = exp.toString();
+            if(!~docContent.indexOf(commentExp.start) || !~docContent.indexOf(commentExp.end)){
+                throw new HeredocSyntaxException(exp);
+            }
+            docContent = docContent.slice(docContent.indexOf(commentExp.start) + commentExp.start.length);
+            docContent = docContent.slice(0, docContent.indexOf(commentExp.end));
+            docContent = docContent.replace(/^([\n|\r\n|\r]+)/, "");
+            
+            var lines = docContent.split(/[\r|\r\n|\n]/);
+            if(lines.length && !(lines[0].trim())){
+                lines.shift();
+            }
+            if(lines.length && !(lines[lines.length-1].trim())){
+                lines.pop();
+            }
+            
+            if(!!trimIndent){
+                var indentLength = 9999;
+                for(var i=0; i&lt;lines.length; i++){
+                    indentLength = Math.min(indentLength, lines[i].match(/^[ \t]*/)[0].length);
+                }
+                
+                for(var i=0; i&lt;lines.length; i++){
+                    lines[i] = lines[i].replace(new RegExp("^([ \t]{" + indentLength + "})"), "");
+                }
+            }
+            docContent = lines.join("\n");
+            return docContent;
+        },
+        zip : (function(){
+            if(!!JSZip){
+                return JSZip;
+            }
+            throw new Error("requires JSZip");
+        })(),
+        saveAs : (function(){
+            if(!!saveAs){
+                return saveAs;
+            }
+            throw new Error("requires saveAs");
+        })()
+    };
+
+})();
+
+
+// _content.js
+// 書庫に含めるファイルを動的に作成するためのHTMLテンプレート定義
+
+window.AlphaJpgApp = window.AlphaJpgApp || {};
+
+(function(){
+    var fileContents = {
+        js : AlphaJpgApp.util.heredoc(function(){/*
+            (function(){
+                var Alpha = {
+                    mask : function(elm){
+                        var replace = function(original, mask){
+                            var canvas = document.createElement("canvas");
+                            canvas.setAttribute("width", original.naturalWidth);
+                            canvas.setAttribute("height", original.naturalHeight);
+                            
+                            var con = canvas.getContext("2d");
+                            con.drawImage(mask, 0, 0);
+                            
+                            var maskImageData = con.getImageData(0, 0, original.naturalWidth, original.naturalHeight);
+                            
+                            con.drawImage(original, 0, 0);
+                            var mainImageData = con.getImageData(0, 0, original.naturalWidth, original.naturalHeight);
+                            
+                            for(var i=0; i&lt;mainImageData.data.length; i+=4){
+                                (function(pos){
+                                    mainImageData.data[pos + 3] = maskImageData.data[pos];
+                                })(i);
+                            }
+                            con.putImageData(mainImageData, 0, 0);
+                            
+                            original.dataset.originalImage = original.getAttribute("src");
+                            original.src = canvas.toDataURL("image/png");
+                        };
+                        var mask = new Image();
+                        mask.addEventListener("load", function(){
+                            replace(elm, mask);
+                        }, false);
+                        mask.src = elm.dataset.alphaMask;
+                    }
+                };
+                document.addEventListener("DOMContentLoaded", function(){
+                    var alphaElements = document.querySelectorAll('[data-alpha-mask]');
+                    for(var i=0; i&lt;alphaElements.length; i++){
+                        (function(elm){
+                            if(!elm.complete){
+                                var mask = function(){
+                                    Alpha.mask(elm);
+                                    elm.removeEventListener("load", mask, false);
+                                };
+                                elm.addEventListener("load", mask, false);
+                            }
+                            else{
+                                Alpha.mask(elm);
+                            }
+                        })(alphaElements[i]);
+                    }
+                }, false);
+            })();
+        */}, true),
+        html : AlphaJpgApp.util.heredoc(function(){/*
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;script src="alpha.js"&gt;&lt;/script&gt;
+                    &lt;style&gt; body{ background-image : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIBFC0YMIVMMgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAL0lEQVQ4y2NcsGDBfwY8ID4+Hp80AxMDhWDUgMFgAOP////xpoOFCxeOBuLwNwAA6aMJ+gCSWQwAAAAASUVORK5CYII='); }&lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;img src="%NAME%.jpg" data-alpha-mask="%NAME%_mask.jpg"&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+        */}, true)
+    };
+    AlphaJpgApp.fileContents = fileContents;
+})();
+
+
+// _zip.js
+// 書庫作成 及び ローカル保存
+
+window.AlphaJpgApp = window.AlphaJpgApp || {};
+
+(function(){
+    AlphaJpgApp.toZipFile = function(mainBlob, maskBlob){
+        var zip = new AlphaJpgApp.util.zip();
+        var sliceTill = currentFileName.indexOf(".");
+        var name = currentFileName.slice(0, sliceTill &lt; 0 ? currentFileName.length : sliceTill);
+        var docRoot = zip.folder("htdocs");
+        docRoot.file("alpha.js", AlphaJpgApp.fileContents.js);
+        docRoot.file("index.html", AlphaJpgApp.fileContents.html.replace(/%NAME%/g, name));
+        docRoot.file(name + ".jpg", mainBlob, { binary : true });
+        docRoot.file(name + "_mask.jpg", maskBlob, { binary : true });
+        AlphaJpgApp.util.saveAs(zip.generate({ type : "blob" }), name + ".zip");
+    };
+})();
+
+
+// _creator.js
+// canvasを経由した画像データの作成, UI管理
+
+window.AlphaJpgApp = window.AlphaJpgApp || {};
+
+(function(){
+
+    var clearCanvas = function(imageResultArea, mainCanvas, maskCanvas){
+        if(!!mainCanvas.width && !!mainCanvas.height){
+            mainCanvas.getContext("2d").clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+        }
+        if(!!maskCanvas.width && !!maskCanvas.height){
+            maskCanvas.getContext("2d").clearRect(0, 0, maskCanvas.width, maskCanvas.height);
+        }
+        
+        var resultImages = imageResultArea.querySelectorAll("IMG");
+        for(var i=0; i&lt;resultImages.length; i++){
+            resultImages[i].parentNode.removeChild(resultImages[i]);
+        }
+    };
+    
+    var confirmImage = function(elements){
+        var file = elements.imageInput.files[0];
+        var reader = new FileReader();
+        reader.onloadend = function(){
+            elements.confirmImage.parentNode.parentNode.classList.remove("noimage");
+            elements.confirmImage.src = reader.result;
+        }
+        if(!!file){
+            reader.readAsDataURL(file);
+            clearCanvas(elements.imageResults, elements.mainCanvas, elements.maskCanvas);
+            currentFileName = file.name;
+            
+            elements.filesizeInfo.innerHTML = file.size + "byte";
+        }
+        else{
+            elements.confirmImage.src = "";
+            elements.confirmImage.parentNode.parentNode.classList.add("noimage");
+            clearCanvas(elements.imageResults, elements.mainCanvas, elements.maskCanvas);
+        }
+    };
+    
+    var canvas2jpg = function(canvas, jpgLevel){
+        var dataurl = canvas.toDataURL("image/jpeg", jpgLevel);
+        var bin = atob(dataurl.split(",")[1]);
+        var buffer = new Uint8Array(bin.length);
+        for(var i=0; i&lt;bin.length; i++){
+            buffer[i] = bin.charCodeAt(i);
+        }
+        return buffer;
+    };
+    
+    var conv2jpg = function(elements){
+        var jpgLevel = Math.min(1, Math.max(0, elements.jpgLebelInput.value / 100));
+        var src = elements.confirmImage.getAttribute("src");
+        var canvases = {
+            main : elements.mainCanvas,
+            mask : elements.maskCanvas
+        };
+        clearCanvas(elements.imageResults, elements.mainCanvas, elements.maskCanvas);
+        
+        for(var type in canvases){
+            (function(canvas){
+                var con = canvas.getContext("2d");
+                canvas.setAttribute("width", elements.confirmImage.naturalWidth);
+                canvas.setAttribute("height", elements.confirmImage.naturalHeight);
+                con.drawImage(elements.confirmImage, 0, 0);
+            })(canvases[type]);
+        }
+        
+        var mainCon = canvases.main.getContext("2d");
+        var mainImageData = mainCon.getImageData(0, 0, elements.confirmImage.naturalWidth, elements.confirmImage.naturalHeight);
+        for(var i=0; i&lt;mainImageData.data.length; i+=4){
+            (function(pos){
+                mainImageData.data[pos + 3] = 255;
+            })(i);
+        }
+        mainCon.putImageData(mainImageData, 0, 0);
+
+        var maskCon = canvases.mask.getContext("2d");
+        var maskImageData = maskCon.getImageData(0, 0, elements.confirmImage.naturalWidth, elements.confirmImage.naturalHeight);
+        for(var i=0; i&lt;maskImageData.data.length; i+=4){
+            (function(pos){
+                maskImageData.data[pos + 0] = maskImageData.data[pos + 3];
+                maskImageData.data[pos + 1] = maskImageData.data[pos + 3];
+                maskImageData.data[pos + 2] = maskImageData.data[pos + 3];
+                maskImageData.data[pos + 3] = 255;
+                
+            })(i);
+        }
+        maskCon.putImageData(maskImageData, 0, 0);
+
+        AlphaJpgApp.toZipFile(canvas2jpg(canvases.main, jpgLevel), canvas2jpg(canvases.mask, jpgLevel));
+    };
+
+    AlphaJpgApp.setup = function(elements){
+        elements.imageInput.addEventListener("change", function(){
+            confirmImage(elements);
+        }, false);
+        
+        elements.createTrigger.addEventListener("click", function(){
+            conv2jpg(elements);
+        }, false);
+    };
+})();
+
+
+// main.js
+// 全体管理用JS
+
+window.AlphaJpgApp = window.AlphaJpgApp || {};
+document.addEventListener("DOMContentLoaded", function(){
+    AlphaJpgApp.setup({
+        imageInput : document.getElementById("image_input"),
+        imageResults : document.getElementById("image_results"),
+        mainCanvas : document.getElementById("main_canvas"),
+        maskCanvas : document.getElementById("mask_canvas"),
+        filesizeInfo : document.getElementById("filesize"),
+        confirmImage : document.querySelector("#confirm_img &gt; IMG"),
+        createTrigger : document.getElementById("image_create"),
+        jpgLebelInput : document.getElementById("image_level")
+    });
+}, false);
+
+</pre>
 						</section>
 					</div>
 				</div>
@@ -221,12 +599,26 @@
 				<div class="c-content_panel__main">
 					<div class="c-content_panel__wrap">
 						<header>
-							<h1>About Me</h1>
-							<p></p>
+							<h1>This Site and Me</h1>
+							<p>このポートフォリオサイトに関して 及び 私自身について紹介させていただきます。</p>
 						</header>
 						
 						<section>
-						
+							<figure class="u-paragraph_image __float_right">
+								<img src="./images/me.jpg">
+							</figure>
+							<dl>
+								<dt>私について－仕様</dt>
+								<dd>
+									<ul>
+										<li>Dai Saitou</li>
+										<li>1974年生まれ ♂</li>
+										<li>居住地 : 茨城県牛久市</li>
+										<li>学歴 : （客観的にみて「良い大学」の理学部とその大学院ですが、仕事内容と関連が低いのでここでは省略します）</li>
+										<li>職歴 : 新卒で大手SIerにて公共事業に関するWebアプリケーション開発を担当。その後、LLP(Web開発), 県委託事業(≒Web系コンサル), ベンチャー(Web,アプリ開発)等を経て2013年フリーに転向。</li>
+									</ul>
+								</dd>
+							</dl>
 						</section>
 					</div>
 				</div>
@@ -237,22 +629,47 @@
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Works - JS Captcha</h1>
-							<p></p>
+							<p>個人事業として開発し汎用的に使用している小規模SNS向けの wordpress用 会員管理プラグインです。セキュリティ強化のためJavaScriptによる画像認証を併用しています。</p>
 						</header>
 						
 						<section>
 							<figure class="u-paragraph_image __float_left">
-								<img src="./images/cp_01.jpg">
+								<img src="./images/cp_01.jpg"><br><br>
+								<img src="./images/cp_02.jpg">
 							</figure>
 							<dl>
 								<dt>URL</dt>
 								<dd>
-									<a href="http://dev.moon-bow.net/" target="_blank">http://dev.moon-bow.net/</a>
+									会員登録・ログイン機能用サンプルサイト <a href="http://dev.moon-bow.net/" target="_blank">http://dev.moon-bow.net/</a><br>
+									（画像認証のパターンは「魚群」「どんぐり」「桜」「もみじ」「雪景色」の５パターンを用意していますが、これらはwordpress管理画面で サイト管理者が画像や動作設定を行うことになります）
+								</dd>
+								<dt>担当範囲</dt>
+								<dd>
+									全範囲
+								</dd>
+								<dt>プラグインの特徴</dt>
+								<dd>
+									<ul>
+										<li>インストール後に専用のカスタム投稿タイプページが自動的に作成され、login画面などではこの専用ページを表示します。</li>
+										<li>通常のlogin画面は使用不可となるため、スパム攻撃をかわしやすい構成になっています。ログイン処理自体はwordpressのデフォルトの関数を使用しているため、セキュリティ面での劣化はありません。</li>
+										<li>専用ページ表示用のtemplateはデフォルトで用意してあり、同名のtemplateを使用しているtheme内に配置することで上書くことができます。（single.phpなどと同じ感覚でカスタマイズできます）</li>
+										<li>会員登録時の処理フローは自動で行われ、確認メール配信やその後のアクティベーションも機能に含まれます。</li>
+										<li>配信する確認メールは、テンプレートをwordpress管理画面にて編集することが可能です。</li>
+										<li>会員として登録した場合、自動的に編集者権限がふられます。管理者権限以外のユーザーはwordpress管理画面には入れず、login情報のみが保持されます。（single.php や page.php 内でのlogin情報による処理分岐を想定）</li>
+									</ul>
 								</dd>
 							</dl>
-							<figure class="u-paragraph_image __float_right">
-								<img src="./images/cp_02.jpg">
-							</figure>
+							<dl>
+								<dt>画像認証の特徴</dt>
+								<dd>
+									<ul>
+										<li>背景画像とドット画像（複数パターン可）の登録が可能で、必要に応じてアニメーションパターンを設定することができます。</li>
+										<li>登録された画像認証パターンは、ランダム表示 や 月ごとの切り替えが可能です。</li>
+										<li>設定済みパラメータを使用して、動的に画像認証用JavaScriptコードを出力します。</li>
+										<li>ドットが形成する認証文字列（数字）はAjaxで取得した座標データを展開して表示します。座標データは実際の数字のpathからランダムに数ピクセルずらしたものを使用し、その順番もシャッフルしたデータをresponseとして返しているため、悪意のある自動解析プログラムでの解析が困難なものとなっています。</li>
+									</ul>
+								</dd>
+							</dl>
 						
 						</section>
 					</div>
