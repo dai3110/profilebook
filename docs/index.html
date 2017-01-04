@@ -1,7 +1,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width">
+		<title>DaiSaito PORTFOLIO 2017</title>
 		<link rel="stylesheet" href="./assets/styles/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Sarala" rel="stylesheet">
@@ -10,42 +12,34 @@
 		<script type="text/javascript" src="./assets/libs/syntaxhighlighter/scripts/shCore.js"></script>
 		<script type="text/javascript" src="./assets/libs/syntaxhighlighter/scripts/shBrushJScript.js"></script>
 		<script type="text/javascript" src="./assets/scripts/main.js"></script>
-		
 	</head>
 	<body>
 		<main>
 			<header id="head_panel">
 
-				<h1 class="c-texture_logo" data-subtitle="2016 Dai Saito Technical Profile">
-					<span class="c-texture_logo__text" data-logo-text="P"></span>
-					<span class="c-texture_logo__text" data-logo-text="O"></span>
-					<span class="c-texture_logo__text" data-logo-text="R"></span>
-					<span class="c-texture_logo__text" data-logo-text="T"></span>
-					<span class="c-texture_logo__text" data-logo-text="F"></span>
-					<span class="c-texture_logo__text" data-logo-text="O"></span>
-					<span class="c-texture_logo__text" data-logo-text="L"></span>
-					<span class="c-texture_logo__text" data-logo-text="I"></span>
-					<span class="c-texture_logo__text" data-logo-text="O"></span>
+				<h1 class="c-texture_logo">
+					<span data-role="sub_title">2017 Dai Saito Technical Profile</span>
+					<span data-role="main_title">PORTFOLIO</span>
 				</h1>
 
 				<nav class="c-main_menu">
 					<ul class="c-main_menu__frame">
-						<li class="c-main_menu__panel __order_1 __ico_fi __ico-small" data-icon="&#xf171">
+						<li class="c-main_menu__panel __order_1 __ico_fi __main __ico-small" data-icon="&#xf171">
 							<a href="#article_works_cs"><span class="u-linklabel">Works<br>Corporate Site</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_2 __ico_fa" data-icon="&#xf02d">
+						<li class="c-main_menu__panel __order_2 __ico_fa __main" data-icon="&#xf02d">
 							<a href="#article_works_bk"><span class="u-linklabel">Works<br>BookOS UIβ</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_3 __ico_fi" data-icon="&#xf17a">
+						<li class="c-main_menu__panel __order_3 __ico_fi __main" data-icon="&#xf17a">
 							<a href="#article_works_jp"><span class="u-linklabel">Works<br>JP Promotion</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_4 __ico_fa" data-icon="&#xf03e">
+						<li class="c-main_menu__panel __order_4 __ico_fa __main" data-icon="&#xf03e">
 							<a href="#article_works_mt"><span class="u-linklabel">Works<br>Masking Tool</span></a>
 						</li>
 						<li class="c-main_menu__panel __order_5 __ico_fa __main" data-icon="&#xf183">
 							<a href="#article_about_me"><span class="u-linklabel">This Site<br>and Me</span></a>
 						</li>
-						<li class="c-main_menu__panel __order_6 __ico_fa" data-icon="&#xf084">
+						<li class="c-main_menu__panel __order_6 __ico_fa __main" data-icon="&#xf084">
 							<a href="#article_works_cp"><span class="u-linklabel">Works<br>JS Captcha</span></a>
 						</li>
 						<li class="c-main_menu__panel __order_7 __ico_fa __sub" data-icon="&#xf13b">
@@ -66,21 +60,20 @@
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Works - Corporate Site</h1>
-							<p>コーディングに関わったコーポレートサイトのうち、2016年現在の直近のものをご紹介いたします。</p>
+							<p>
+								コーディングに関わったコーポレートサイトのうち、2017年現在の直近のものをご紹介いたします。<br>
+								基本的にはJavaScriptのコーディングが主な担当であり、関連するHTMLとCSSについてもコンポーネント単位で作成しました。
+								プロジェクトの方針次第では、JavaScript側からHTML,CSSの生成を行い、メンテナンスの容易さを優先した構成となることを優先しています。
+							</p>
 						</header>
 						
 						<section>
-							<h1>六本木ヒルズ</h1>
+							<h1>大手複合商業施設サイト</h1>
 
 							<figure class="u-paragraph_image __float_left">
 								<img src="./images/cs_01.jpg">
 							</figure>
 							<dl>
-								<dt>URL</dt>
-								<dd>
-									http://ropongihills.com/<br>
-									<span class="__thin">(アクセス解析への影響のため、お手数おかけいたしますがURLは手動で入力して下さい)</span>
-								</dd>
 								<dt>担当業務</dt>
 								<dd>
 									<ul>
@@ -111,14 +104,65 @@
 							</p>
 							<p>
 								特殊UIとして特筆すべきものに「フロアマップ」が挙げられます。<br>
-								(http://www.roppongihills.com/floor_map/keyakizaka_dohri.html など)<br>
 								GoogleMapsと同様の操作感を実現した画像ビューアが必要とされ、アニメーション付きズーム（ピンチイン・ピンチアウト）や慣性を効かせたスクロール、特定の座標へのピン表示など、すべてスクラッチで作成しました。（座標変換や指数対数計算などが絡み、数学的にも難しいものでした）
 							</p>
 						</section>
-
-						<footer>
-							<p>その他、業務系コーディングについては<a href="#article_about_me">About Me</a>をご参照ください</p>
-						</footer>
+						
+						<section>
+							<h1>都内私立大学 入試サイト</h1>
+							<figure class="u-paragraph_image __float_left">
+								<img src="./images/cs_03.jpg">
+							</figure>
+							<dl>
+								<dt>担当業務</dt>
+								<dd>
+									<ul>
+										<li>JavaScriptコーディング(リニューアル時の改修)</li>
+										<li>その他 特設サイトのJSコーディング</li>
+									</ul>
+								</dd>
+							</dl>
+							<p>
+								基幹システムのログイン情報に関するAPIと連携したJavaScriptのメンテナンスを担当しました。
+								主に、以前 Backbone.js + CoffeeScript + jQuery を使用して作成されたコードに潜伏している不具合の発見・改修を行い、単体試験については専用のブックマークレットを作成して対応しました。
+							</p>
+						</section>
+						
+						<section>
+							<h1>その他</h1>
+							<p>
+								サイトに使用するコンポーネントのうち、JavaScriptへの依存性の高いものについては、メイン担当業務以外のサイトについても担当いたしました。
+								多くは、
+							</p>
+							<ul>
+								<li>グローバルナビ（メガメニュー）とスマホ版のアコーディオンメニューの連携</li>
+								<li>TabUIとstickey要素の管理</li>
+								<li>カルーセル（自動送り・手動送り双方）</li>
+							</ul>
+							<p>
+								等を扱い、いずれも一般的なJSライブラリでのカスタマイズの範囲を超えた特殊なデザインのものを担当しております。
+							</p>
+							<figure class="u-paragraph_image __float_left"><br>
+								<img src="./images/cs_04.jpg">
+								<p>特殊効果で切り替わるカルーセル</p>
+								<br>
+								<img src="./images/cs_05.jpg">
+								<p>map-area要素での指定が困難なクリッカブルマップ</p>
+							</figure>
+							<h2>特殊効果カルーセル</h2>
+							<p>
+								車のワイパーのような動きで画像を切り替えたい という要件があり、canvas要素で対応しました。
+								２枚のcanvasをレイヤーとして重ね合わせることで動作の軽いカルーセルとして仕上げています。<br>
+								カルーセル内に検索フォーム、さらに下部中央にも円形のアクセサリが配置され、これらの大きさと位置は画面サイズに完全に依存するため、
+								(css3で新しく導入された)vwを単位として使用し、極力JavaScriptを使用せずにcssで済むように工夫しています。
+							</p>
+							
+							<h2>クリッカブルマップ</h2>
+							<p>
+								日本地図からエリアを選択したい という要件があったものの、HTMLでの &lt;map&gt;&lt;area/&gt;&lt;/map&gt; はデータの作成とメンテナンス性に難があるため、<br>
+								一定値以上のalphaを超える同色で塗られた領域を１つのエリアとみなすJSプログラムを作成し、PNG画像から自動的にクリッカブルマップとして認識させています。この画像の解析にもcanvasを使用し、ピクセルデータの扱いで動作が重くならないよう、アルゴリズムにも工夫しました。
+							</p>
+						</section>
 					</div>
 				</div>
 			</article>
@@ -128,7 +172,10 @@
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Works - BookOS UI β</h1>
-							<p>コンテストに出展した OS風サイトでの小説閲覧サイト「山猫文庫」をご紹介いたします。</p>
+							<p>
+								コンテストに出展した OS風サイトでの小説閲覧サイト「山猫文庫」をご紹介いたします。<br>
+								縦書きをテーマとしたコンテストではありましたが、webアプリケーションと縦書きの親和性を確認したいと考え、UIとして「直観的な操作性をもったプラットホーム」と「読書環境としてなじみのあるインターフェイス」を構築しました。
+							</p>
 						</header>
 						
 						<section>
@@ -165,8 +212,10 @@
 								</dd>
 							</dl>
 							<p>
-								縦書きデザインのコンテストへの出展のため、CSSの縦書きモジュールを使用することが必須となり、加えて、リフロー処理にCSSのcolumnsを使用しているため、表示処理速度は非常に遅いものとなってしまいました。<br>
-								そのため、電子書籍の形態としては β版として考えています。
+								縦書きデザインのコンテストへの出展のため、CSSの縦書きモジュールを使用することが必須となり、加えて、リフロー処理にCSSのcolumnsを使用しているため、表示処理速度は非常に遅いものとなってしまいました。
+								そのため、電子書籍の形態としては β版として考えています。<br>
+								ブラウザそれぞれで、縦書き指定の writing-mode:vertical-rl と columns を同時に使用することがまだ前提になっていないようであり、このサイトを作成した後に（ブラウザのバージョンアップで）発生した表示不具合もいくつか見られます。
+								次のリファクタリング時には columnsの使用をやめ、リフロー処理用に新規でJSコードを用意することで表示速度の向上を図る予定です。
 							</p>
 						</section>
 					</div>
@@ -178,10 +227,14 @@
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Works - JP Promotion</h1>
-							<p>コンテストに出展した 絵巻物風インターフェイスの日本文化紹介サイトです。</p>
+							<p>
+								コンテストに出展した 絵巻物風インターフェイスの日本文化紹介サイトです。<br>
+								与えられたコンテンツをそのまま使用することが条件であるため、レイアウトの統一感などが欠けてしまっていますが、（特に日本語が分からない方にとって）分かりづらいコンテンツ内容をUIでカバーするよう心がけました。
+							</p>
 						</header>
 						
 						<section>
+							<h1>日本文化事始め －絵巻物で体感する日本文化－</h1>
 							<figure class="u-paragraph_image __float_left">
 								<img src="./images/jp_01.jpg"><br><br>
 								<img src="./images/jp_02.jpg">
@@ -228,17 +281,22 @@
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Works - Masking Tool</h1>
-							<p>ファイルサイズの大きな半透過PNGファイルをWebで使用したい場合に、アルファマスクと本体の２枚のJPG画像に分け、大幅にファイルサイズを落としてWeb上で表示するためのツールです。</p>
+							<p>
+								ファイルサイズの大きな半透過PNGファイルをWebで使用したい場合に、アルファマスクと本体の２枚のJPG画像に分け、大幅にファイルサイズを落としてWeb上で表示するためのツールです。<br>
+								また、個人開発ツールとして公開していますので、GitHubのレポジトリも併せてご確認ください。
+							</p>
 						</header>
 						
 						<section>
+							<h1>Alpha JPG</h1>
 							<figure class="u-paragraph_image __float_left">
 								<img src="./images/mt_01.jpg">
 							</figure>
 							<dl>
 								<dt>URL</dt>
 								<dd>
-									<a href="https://dai3110.github.io/alpha_jpg/" target="_blank">https://dai3110.github.io/alpha_jpg/</a>
+									<a href="https://dai3110.github.io/alpha_jpg/" target="_blank">https://dai3110.github.io/alpha_jpg/</a><br>
+									<a href="https://github.com/dai3110/alpha_jpg" target="_blank">https://github.com/dai3110/alpha_jpg</a>(GitHub)
 								</dd>
 								<dt>担当範囲</dt>
 								<dd>
@@ -261,336 +319,6 @@
 								</dd>
 							</dl>
 						</section>
-						<section>
-							<p>
-								開発コーディング サンプルも兼ねて、こちらにてJSのコーディングパターンを記載いたします。
-							</p>
-							<dl>
-								<dt>タスクランナー</dt>
-								<dd>現在は主に gulp を使用しています。(sassを使用しない程度の規模の画面の場合は、JSも生で記述することが多いです)
-								<dt>エディター</dt>
-								<dd>業務上の問題が発生しない場合は、IDEは使用せずに サクラエディタ のような動作の軽いテキストエディタで済ませます。</dd>
-								<dt>JSライブラリ等</dt>
-								<dd>
-									<ul>
-										<li>要件として望まれている場合は jQueryなどのライブラリを使用することもありますが、特に個人案件の場合、基本的には 素のJavaScriptで記述します。</li>
-										<li>altJSについても、要件として必要な場合以外は使用していません。（特に coffeeScriptは、スコープがJavaScriptと異なるため、意図しないバグを回避するためにも滅多に使いません）</li>
-										<li>JSのMVCモデルは（数年前は個人的に極端にこだわっていましたが）、かえってメンテナンスがしづらくなるケースが多いため、今はあまりモデル分割をせずに作成しています。</li>
-									</ul>
-								</dd>
-								<dt>JSコーディングパターン</dt>
-								<dd>
-									<ul>
-										<li>window直下の変数汚染, 重複する変数による不具合の発生防止（特にloop時のクロージャの使用）, 疑似的なインスタンスの作成 等の点から、無名関数を多用します。</li>
-										<li>異常系処理では一旦 exception を throw するようにし、エラーを確認しやすいコードを維持します。（特にjQueryを使用する場合は、取得要素のlengthを毎回意識します）</li>
-										<li>規模の大きいプロジェクトの場合、設定値や文字列等はconfig用のJSを分けて作成し、その各値の意味が分かる記述をします。また、処理にHTMLの要素が絡むものについては メインの初期化処理内にクラス名やクエリを集約します。</li>
-									</ul>
-								</dd>
-							</dl>
-<pre class="brush: js">
-/*
-Masking Toolに使用しているJavaScriptコードです。
-（gulpでuniflyし出力したコード）
-*/
-
-
-// _util.js
-// 全般で使用する関数, Exceptionの管理, 外部ライブラリのwrappingなど
-
-window.AlphaJpgApp = window.AlphaJpgApp || {};
-
-(function(){
-    var HeredocTypeException = function(value){
-        this.value = value.toString();
-        this.message = "Heredoc argument requires as a function contains a block comment.";
-        this.toString = function(){
-            return this.message + "\n" + this.value;
-        };
-    };
-    
-    var HeredocSyntaxException = function(value){
-        this.value = value.toString();
-        this.message = "Heredoc argument must contain a block comment.";
-        this.toString = function(){
-            return this.message + "\n" + this.value;
-        };
-    };
-
-    window.AlphaJpgApp.util = {
-        heredoc : function(exp, trimIndent){
-            var commentExp = { start : "/*", end : "*/" };
-            if(typeof exp != "function"){
-                throw new HeredocTypeException(exp);
-            }
-            var docContent = exp.toString();
-            if(!~docContent.indexOf(commentExp.start) || !~docContent.indexOf(commentExp.end)){
-                throw new HeredocSyntaxException(exp);
-            }
-            docContent = docContent.slice(docContent.indexOf(commentExp.start) + commentExp.start.length);
-            docContent = docContent.slice(0, docContent.indexOf(commentExp.end));
-            docContent = docContent.replace(/^([\n|\r\n|\r]+)/, "");
-            
-            var lines = docContent.split(/[\r|\r\n|\n]/);
-            if(lines.length && !(lines[0].trim())){
-                lines.shift();
-            }
-            if(lines.length && !(lines[lines.length-1].trim())){
-                lines.pop();
-            }
-            
-            if(!!trimIndent){
-                var indentLength = 9999;
-                for(var i=0; i&lt;lines.length; i++){
-                    indentLength = Math.min(indentLength, lines[i].match(/^[ \t]*/)[0].length);
-                }
-                
-                for(var i=0; i&lt;lines.length; i++){
-                    lines[i] = lines[i].replace(new RegExp("^([ \t]{" + indentLength + "})"), "");
-                }
-            }
-            docContent = lines.join("\n");
-            return docContent;
-        },
-        zip : (function(){
-            if(!!JSZip){
-                return JSZip;
-            }
-            throw new Error("requires JSZip");
-        })(),
-        saveAs : (function(){
-            if(!!saveAs){
-                return saveAs;
-            }
-            throw new Error("requires saveAs");
-        })()
-    };
-
-})();
-
-
-// _content.js
-// 書庫に含めるファイルを動的に作成するためのHTMLテンプレート定義
-
-window.AlphaJpgApp = window.AlphaJpgApp || {};
-
-(function(){
-    var fileContents = {
-        js : AlphaJpgApp.util.heredoc(function(){/*
-            (function(){
-                var Alpha = {
-                    mask : function(elm){
-                        var replace = function(original, mask){
-                            var canvas = document.createElement("canvas");
-                            canvas.setAttribute("width", original.naturalWidth);
-                            canvas.setAttribute("height", original.naturalHeight);
-                            
-                            var con = canvas.getContext("2d");
-                            con.drawImage(mask, 0, 0);
-                            
-                            var maskImageData = con.getImageData(0, 0, original.naturalWidth, original.naturalHeight);
-                            
-                            con.drawImage(original, 0, 0);
-                            var mainImageData = con.getImageData(0, 0, original.naturalWidth, original.naturalHeight);
-                            
-                            for(var i=0; i&lt;mainImageData.data.length; i+=4){
-                                (function(pos){
-                                    mainImageData.data[pos + 3] = maskImageData.data[pos];
-                                })(i);
-                            }
-                            con.putImageData(mainImageData, 0, 0);
-                            
-                            original.dataset.originalImage = original.getAttribute("src");
-                            original.src = canvas.toDataURL("image/png");
-                        };
-                        var mask = new Image();
-                        mask.addEventListener("load", function(){
-                            replace(elm, mask);
-                        }, false);
-                        mask.src = elm.dataset.alphaMask;
-                    }
-                };
-                document.addEventListener("DOMContentLoaded", function(){
-                    var alphaElements = document.querySelectorAll('[data-alpha-mask]');
-                    for(var i=0; i&lt;alphaElements.length; i++){
-                        (function(elm){
-                            if(!elm.complete){
-                                var mask = function(){
-                                    Alpha.mask(elm);
-                                    elm.removeEventListener("load", mask, false);
-                                };
-                                elm.addEventListener("load", mask, false);
-                            }
-                            else{
-                                Alpha.mask(elm);
-                            }
-                        })(alphaElements[i]);
-                    }
-                }, false);
-            })();
-        */}, true),
-        html : AlphaJpgApp.util.heredoc(function(){/*
-            &lt;html&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;script src="alpha.js"&gt;&lt;/script&gt;
-                    &lt;style&gt; body{ background-image : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIBFC0YMIVMMgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAL0lEQVQ4y2NcsGDBfwY8ID4+Hp80AxMDhWDUgMFgAOP////xpoOFCxeOBuLwNwAA6aMJ+gCSWQwAAAAASUVORK5CYII='); }&lt;/style&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;img src="%NAME%.jpg" data-alpha-mask="%NAME%_mask.jpg"&gt;
-                &lt;/body&gt;
-            &lt;/html&gt;
-        */}, true)
-    };
-    AlphaJpgApp.fileContents = fileContents;
-})();
-
-
-// _zip.js
-// 書庫作成 及び ローカル保存
-
-window.AlphaJpgApp = window.AlphaJpgApp || {};
-
-(function(){
-    AlphaJpgApp.toZipFile = function(mainBlob, maskBlob){
-        var zip = new AlphaJpgApp.util.zip();
-        var sliceTill = currentFileName.indexOf(".");
-        var name = currentFileName.slice(0, sliceTill &lt; 0 ? currentFileName.length : sliceTill);
-        var docRoot = zip.folder("htdocs");
-        docRoot.file("alpha.js", AlphaJpgApp.fileContents.js);
-        docRoot.file("index.html", AlphaJpgApp.fileContents.html.replace(/%NAME%/g, name));
-        docRoot.file(name + ".jpg", mainBlob, { binary : true });
-        docRoot.file(name + "_mask.jpg", maskBlob, { binary : true });
-        AlphaJpgApp.util.saveAs(zip.generate({ type : "blob" }), name + ".zip");
-    };
-})();
-
-
-// _creator.js
-// canvasを経由した画像データの作成, UI管理
-
-window.AlphaJpgApp = window.AlphaJpgApp || {};
-
-(function(){
-
-    var clearCanvas = function(imageResultArea, mainCanvas, maskCanvas){
-        if(!!mainCanvas.width && !!mainCanvas.height){
-            mainCanvas.getContext("2d").clearRect(0, 0, mainCanvas.width, mainCanvas.height);
-        }
-        if(!!maskCanvas.width && !!maskCanvas.height){
-            maskCanvas.getContext("2d").clearRect(0, 0, maskCanvas.width, maskCanvas.height);
-        }
-        
-        var resultImages = imageResultArea.querySelectorAll("IMG");
-        for(var i=0; i&lt;resultImages.length; i++){
-            resultImages[i].parentNode.removeChild(resultImages[i]);
-        }
-    };
-    
-    var confirmImage = function(elements){
-        var file = elements.imageInput.files[0];
-        var reader = new FileReader();
-        reader.onloadend = function(){
-            elements.confirmImage.parentNode.parentNode.classList.remove("noimage");
-            elements.confirmImage.src = reader.result;
-        }
-        if(!!file){
-            reader.readAsDataURL(file);
-            clearCanvas(elements.imageResults, elements.mainCanvas, elements.maskCanvas);
-            currentFileName = file.name;
-            
-            elements.filesizeInfo.innerHTML = file.size + "byte";
-        }
-        else{
-            elements.confirmImage.src = "";
-            elements.confirmImage.parentNode.parentNode.classList.add("noimage");
-            clearCanvas(elements.imageResults, elements.mainCanvas, elements.maskCanvas);
-        }
-    };
-    
-    var canvas2jpg = function(canvas, jpgLevel){
-        var dataurl = canvas.toDataURL("image/jpeg", jpgLevel);
-        var bin = atob(dataurl.split(",")[1]);
-        var buffer = new Uint8Array(bin.length);
-        for(var i=0; i&lt;bin.length; i++){
-            buffer[i] = bin.charCodeAt(i);
-        }
-        return buffer;
-    };
-    
-    var conv2jpg = function(elements){
-        var jpgLevel = Math.min(1, Math.max(0, elements.jpgLebelInput.value / 100));
-        var src = elements.confirmImage.getAttribute("src");
-        var canvases = {
-            main : elements.mainCanvas,
-            mask : elements.maskCanvas
-        };
-        clearCanvas(elements.imageResults, elements.mainCanvas, elements.maskCanvas);
-        
-        for(var type in canvases){
-            (function(canvas){
-                var con = canvas.getContext("2d");
-                canvas.setAttribute("width", elements.confirmImage.naturalWidth);
-                canvas.setAttribute("height", elements.confirmImage.naturalHeight);
-                con.drawImage(elements.confirmImage, 0, 0);
-            })(canvases[type]);
-        }
-        
-        var mainCon = canvases.main.getContext("2d");
-        var mainImageData = mainCon.getImageData(0, 0, elements.confirmImage.naturalWidth, elements.confirmImage.naturalHeight);
-        for(var i=0; i&lt;mainImageData.data.length; i+=4){
-            (function(pos){
-                mainImageData.data[pos + 3] = 255;
-            })(i);
-        }
-        mainCon.putImageData(mainImageData, 0, 0);
-
-        var maskCon = canvases.mask.getContext("2d");
-        var maskImageData = maskCon.getImageData(0, 0, elements.confirmImage.naturalWidth, elements.confirmImage.naturalHeight);
-        for(var i=0; i&lt;maskImageData.data.length; i+=4){
-            (function(pos){
-                maskImageData.data[pos + 0] = maskImageData.data[pos + 3];
-                maskImageData.data[pos + 1] = maskImageData.data[pos + 3];
-                maskImageData.data[pos + 2] = maskImageData.data[pos + 3];
-                maskImageData.data[pos + 3] = 255;
-                
-            })(i);
-        }
-        maskCon.putImageData(maskImageData, 0, 0);
-
-        AlphaJpgApp.toZipFile(canvas2jpg(canvases.main, jpgLevel), canvas2jpg(canvases.mask, jpgLevel));
-    };
-
-    AlphaJpgApp.setup = function(elements){
-        elements.imageInput.addEventListener("change", function(){
-            confirmImage(elements);
-        }, false);
-        
-        elements.createTrigger.addEventListener("click", function(){
-            conv2jpg(elements);
-        }, false);
-    };
-})();
-
-
-// main.js
-// 全体管理用JS
-
-window.AlphaJpgApp = window.AlphaJpgApp || {};
-document.addEventListener("DOMContentLoaded", function(){
-    AlphaJpgApp.setup({
-        imageInput : document.getElementById("image_input"),
-        imageResults : document.getElementById("image_results"),
-        mainCanvas : document.getElementById("main_canvas"),
-        maskCanvas : document.getElementById("mask_canvas"),
-        filesizeInfo : document.getElementById("filesize"),
-        confirmImage : document.querySelector("#confirm_img &gt; IMG"),
-        createTrigger : document.getElementById("image_create"),
-        jpgLebelInput : document.getElementById("image_level")
-    });
-}, false);
-
-</pre>
-						</section>
 					</div>
 				</div>
 			</article>
@@ -600,22 +328,69 @@ document.addEventListener("DOMContentLoaded", function(){
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>This Site and Me</h1>
-							<p>このポートフォリオサイトに関して 及び 私自身について紹介させていただきます。</p>
+							<p>私自身について 及び このポートフォリオサイトに関して紹介させていただきます。</p>
 						</header>
 						
 						<section>
+							<h1>About Me</h1>
 							<figure class="u-paragraph_image __float_right">
 								<img src="./images/me.jpg">
 							</figure>
 							<dl>
-								<dt>私について－仕様</dt>
+								<dt>基本仕様</dt>
 								<dd>
 									<ul>
 										<li>Dai Saitou</li>
 										<li>1974年生まれ ♂</li>
 										<li>居住地 : 茨城県牛久市</li>
-										<li>学歴 : （客観的にみて「良い大学」の理学部とその大学院ですが、仕事内容と関連が低いのでここでは省略します）</li>
-										<li>職歴 : 新卒で大手SIerにて公共事業に関するWebアプリケーション開発を担当。その後、LLP(Web開発), 県委託事業(≒Web系コンサル), ベンチャー(Web,アプリ開発)等を経て2013年フリーに転向。</li>
+										<li>学歴 : 2000/04 東京大学理学部卒, 2002/04 同大学院理学系研究科卒</li>
+										<li>職歴 : 新卒で大手SIerにて公共事業に関するWebアプリケーション開発を担当。その後、LLP(Web開発), 県委託事業(≒Web系コンサル), ベンチャー(Web,アプリ開発)等を経て2013年個人事業・フリーに転向。</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>技術的特徴</dt>
+								<dd>
+									2000年以前から個人ホームページを運営していた影響で、学生のころからFORM(+JavaScript)とCGIの連携などのWebプログラミングを始め、結局そのままWeb業界に居ついています。<br>
+									Web2.0と言われた2005年ごろからは元々深く取り組みたいと考えていた ユーザ・インターフェイス に注力するようになり、JavaScript-CSSの連携で思いのままのUIを作成できることが強みとなっております。<br>
+									最近は、UI作成時にエンドユーザーに対してフレンドリーである必要があるとともに、構成やコード自体はチームやメンテナンスする方にとってフレンドリーである必要がある と考えるようになってきました。
+									直接の依頼主, エンドユーザー ＋ 自分自身 の三者がHappyになるような成果物を仕上げられるよう、現在も追究中です。
+								</dd>
+							</dl>
+						</section>
+						<section>
+							<h1>About This Site</h1>
+							<figure class="u-paragraph_image __float_right">
+								<img src="./images/st_01.jpg">
+							</figure>
+							<dl>
+								<dt>コーディング形態</dt>
+								<dd>
+									<ul>
+										<li>JSコードは syntaxhighlighter(コード表示用ライブラリ)以外、スクラッチにて作成。jQuery未使用。</li>
+										<li>タスクランナーにgulpを使用。（コーディングサンプルを兼ねているため、JavaScriptとcssのminifyはしていません。）</li>
+										<li>Sass(SCSS)を使用していますが、特に凝った使い方はしていません。セレクタはBEMの亜流で記述しています。</li>
+										<li>HTMLは、全コンテンツをベタで記述しています。(ejsを使うかwordpressを使うか悩む範囲でしたが、結局どちらも使わずに１ファイルにまとめてしまっています)</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>仕様面の特徴</dt>
+								<dd>
+									<ul>
+										<li>同業の方が閲覧することを前提に、最新ブラウザのみ対象としています。UIも少し不親切ですが、動きのインパクトを優先させていただきました。</li>
+										<li>ポートフォリオであることは既知であることを前提に、サイトタイトル/ロゴは飾り程度に扱っています。</li>
+										<li>Github Pagesを使ってみたくなり、<a href="https://github.com/dai3110/profilebook" target="_blank">https://github.com/dai3110/profilebook</a>のmasterブランチに静的HTMLとして配置しています。</li>
+										<li>HistoryAPIを使用してURLを操作しています。（が、疑似的なURLからのリダイレクトをサーバー側で省略しているので、#ハッシュでのURL表現となっています。）画面遷移の無い「ぺライチ」サイトです。</li>
+									</ul>
+								</dd>
+								<dt>外部リソース &amp; 素材</dt>
+								<dd>
+									<ul>
+										<li>Webフォント：Nunito <a href="https://fonts.google.com/specimen/Nunito" target="_blank">https://fonts.google.com/specimen/Nunito</a></li>
+										<li>Webフォント：Sarala <a href="https://fonts.google.com/specimen/Sarala" target="_blank">https://fonts.google.com/specimen/Sarala</a></li>
+										<li>壁紙画像：<a href="http://wegraphics.net/downloads/free-stained-canvas-backgrounds/" target="_blank">http://wegraphics.net/downloads/free-stained-canvas-backgrounds/</a></li>
+										<li>トップ画像：<a href="http://www.photo-ac.com/main/detail/444874" target="_blank">http://www.photo-ac.com/main/detail/444874</a></li>
 									</ul>
 								</dd>
 							</dl>
@@ -629,7 +404,10 @@ document.addEventListener("DOMContentLoaded", function(){
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Works - JS Captcha</h1>
-							<p>個人事業として開発し汎用的に使用している小規模SNS向けの wordpress用 会員管理プラグインです。セキュリティ強化のためJavaScriptによる画像認証を併用しています。</p>
+							<p>
+								個人事業として開発し汎用的に使用している小規模SNS向けの wordpress用 会員管理プラグインです。セキュリティ強化のためJavaScriptによる画像認証を併用しています。<br>
+								wordpress用の会員管理プラグインは多く存在するものの、メール配信内容やログイン画面など各画面のカスタマイズができないものが多く、部分的に英語が残るなどしてしまうため、オリジナルのプラグインとして作成しました。（今のところ、まだ配布サイトには登録していません）
+							</p>
 						</header>
 						
 						<section>
@@ -681,11 +459,68 @@ document.addEventListener("DOMContentLoaded", function(){
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Front-end Technical Remarks</h1>
-							<p></p>
+							<p>
+								フロントエンド開発における、私自身のコーディングパターンやポリシーについて、概要を記載いたします。<br>
+								基本的には（下請けや個人事業などの）個人開発を前提としたポリシーですので、チーム開発の場合はそのプロジェクトのポリシーを遵守します。
+							</p>
 						</header>
 						
 						<section>
+							<h1>フロントエンド開発 全般について</h1>
+							<ul>
+								<li>
+									新規構築の場合、メンテナンス人員とサイトの寿命を意識します。期間限定のサイトで長い寿命を必要としない場合はパフォーマンスを重視し、場合によってはハードコーディングすることもあります。
+									メンテナンスを前提とした長寿命サイトの場合は、メンテナンス人員の技術レベルに合わせて構成を検討します。（無理にMVCモデルに当てはめることは避けるようにしています）
+								</li>
+								<li>
+									上記「サイト寿命」の問題に関連し、流行りのフレームワークの使用にはやや消極的です。<br>
+									ただし、Ajaxで取得したJSONの展開に関しては例外的であり、vue.jsなどをJSテンプレートエンジンとして好んで使用します。
+								</li>
+								<li>
+									node.js等を使用したタスクランナーについても、メンテナンス人員の技術レベルに合わせて検討します。
+								</li>
+							</ul>
+						</section>
 						
+						<section>
+							<h1>HTMLについて</h1>
+							<ul>
+								<li>
+									案件ごとの対応ブラウザを確認し、プロジェクトで定められたHTMLバージョンに対応したマークアップを行います。
+								</li>
+								<li>
+									なるべく文脈に合わせた要素選定をしていますが、サーバー側のテンプレート化の可能性 や 別の作業者による「コピペ」使用の場合も考慮し、汎用的な要素を使用することも多々あります。
+								</li>
+								<li>
+									デザイン上やむを得ず必要な要素については、CSSの疑似要素を優先的に使用し、それでも補いきれない場合はJavaScriptで補完します。
+								</li>
+								<li>
+									SEOもユーザビリティも意識する必要のないサイトについては、メンテナンス性を優先したマークアップを行います。
+								</li>
+							</ul>
+						</section>
+						
+						<section>
+							<h1>CSSについて</h1>
+							<ul>
+								<li>BEM記法など、セレクタの命名規則については、プロジェクト方針に依存します。</li>
+								<li>HTML自体が(UL-LIなど)親子縛りのある要素である場合、クラス名の乱用は避け、親のクラス名と子セレクタを使用するようにしています。</li>
+								<li>JavaScriptで要素を取得するためのクラス名は使用せず(例：js-xxx)、data属性を使用する方です。</li>
+								<li>margin や padding の付与規則はあまり厳密に設定しない方です。（多くの場合、デザインポリシーがしっかり固まっていれば、これらの指定に困ることは少ない傾向にあります）</li>
+								<li>z-indexの付与規則は比較的こだわる方です。状況次第では、JavaScriptにdebug関数を埋め込みながら開発を進めます。</li>
+								<li>アニメーションは（JavaScriptのタイマーを使用するのではなく）CSSのtransitionを優先して使用します。transitionの設定値が動的な場合でも、transition-functionが特殊でない限りはCSSを使用したアニメーションを利用します。</li>
+							</ul>
+						</section>
+						
+						<section>
+							<h1>JavaScript(ブラウザJS)について</h1>
+							<ul>
+								<li>altJSは、現状は必要性を感じられないため使用していません。型を気にするためにTypeScriptを使用したいならば、型を気にしながらJavaScriptでコーディングすれば済み、オブジェクト指向を意識したコードを書きたければ関数をnewすれば済むためです。</li>
+								<li>CoffeeScriptについても個人では一切使用しません。変数のスコープが１つグローバルなスコープで宣言されるため、バグが潜伏している記述を多く見かけます。</li>
+								<li>エラーを隠ぺいする記述は避け、積極的に例外をthrowします。これはjQuery使用時にバグを発生させやすく（特にlength==0の対応）、深刻な不具合を早期に見つけるための対応です。</li>
+								<li>関数オブジェクトのmethodやprototypeの操作は、ライブラリ作成時以外では使用しません。</li>
+								<li>thisキーワードについては、基本的には、関数内でpublicな値の指定を行う場合以外には使用しません。jQueryなど、thisキーワードを強要するライブラリは多く存在しますが、その場合もすぐに別の具体的な意味をもつ名前の変数に置き換えて使用します。</li>
+							</ul>
 						</section>
 					</div>
 				</div>
@@ -696,11 +531,36 @@ document.addEventListener("DOMContentLoaded", function(){
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Development Environment</h1>
-							<p></p>
+							<p>
+								開発環境に関して、私自身の対応状況を記載いたします。<br>
+								基本的には（下請けや個人事業などの）個人開発を前提としたポリシーですので、チーム開発の場合はそのプロジェクトのポリシーを遵守します。
+							</p>
 						</header>
 						
 						<section>
+							<h1>レポジトリ(主にGit)について</h1>
+							<ul>
+								<li>SVNの使用経験はありますが、10年近く触っていないため、操作にやや不安があります。</li>
+								<li>Gitの基本操作は問題なくできている（はず）です。コマンドも使用しますが、操作ミスを防ぐためにもなるべくGitクライアントを使用しています。</li>
+								<li>Gitフローの管理も可能です。作業者としては、むやみにマージして逆流フローを発生させず、branchのtreeの可読性を維持するようにしています。(PullRequestを必須としたプロジェクトは除く)</li>
+							</ul>
+						</section>
 						
+						<section>
+							<h1>エディタについて</h1>
+							<ul>
+								<li>IDEを指定されたプロジェクトの場合、その指定環境を使用します。</li>
+								<li>指定が無い場合、windowsサクラエディタを使用します。こだわりはありません。</li>
+								<li>(TitaniumStudioで全ファイルを消失 → 完全復旧不能 となったことがあり、IDEに多少の恐怖心はあります。)</li>
+							</ul>
+						</section>
+						
+						<section>
+							<h1>OSについて</h1>
+							<ul>
+								<li>開発環境としては、ここ４年近くはwindowsを扱っています。IEでのデバッグが主な目的ですので、それ以外のこだわりはありません。</li>
+								<li>動作確認用に、個人所有の端末として macOS(PC), iOS(iPhone5s, iPad mini), android(dtab2, Xperia, nexus7)を所有しています。</li>
+							</ul>
 						</section>
 					</div>
 				</div>
@@ -711,11 +571,29 @@ document.addEventListener("DOMContentLoaded", function(){
 					<div class="c-content_panel__wrap">
 						<header>
 							<h1>Back-end Technical Remarks</h1>
-							<p></p>
+							<p>
+								バックエンド開発における、私自身のコーディングパターンやポリシーについて、概要を記載いたします。<br>
+								基本的には（下請けや個人事業などの）個人開発を前提としたポリシーですので、チーム開発の場合はそのプロジェクトのポリシーを遵守します。
+							</p>
 						</header>
 						
 						<section>
+							<h1>バックエンド開発 概要</h1>
+							<p>
+								バックエンドに関しては、現在は基本的に WordPress のみを扱っております。必然的にPHPについても仕様全般をおさえていますが、フレームワークやツールに関しては手を付けていない状況です。<br>
+								10年前まではJava(J2EE)を本職で使用していましたが、現在は辛うじて概念を記憶している程度です。<br>
+								DBについても、リレーショナルデータベースに関してsql程度（MySQL）は扱えますが、チューニング等は完全に守備範囲外になります。
+							</p>
+						</section>
 						
+						<section>
+							<h1>WordPressについて</h1>
+							<ul>
+								<li>バックエンドの中でも、WordPressに関しては極端に守備範囲が広く、プラグインやテーマの作成も可能です。</li>
+								<li>配布を目的としていない場合にも、プラグインは頻繁に作成します。汎用的に扱うことが望ましい機能についてはプラグイン化を、サイト固有の機能についてはテーマにてハードコーディングをも含む記述を行っています。</li>
+								<li>configなどサイトで持つべき設定値は、極力、option値としてサイト側に持たせて管理します。その際、管理画面から入力可能なUIを、テーマのfunctions.phpで作成します。</li>
+								<li>カスタム投稿タイプやカスタムフィールドを活用したwebアプリケーション化も得意とし、これに合わせた管理画面のカスタマイズも不自由なく行えます。また、管理画面以外のページでもログイン状態に合わせた表示の切り替えを行うことも可能です。</li>
+							</ul>
 						</section>
 					</div>
 				</div>
@@ -725,11 +603,5 @@ document.addEventListener("DOMContentLoaded", function(){
 				<a href="#top" id="link2top" class="c-anchor__to_top" title="トップへ"></a>
 			</nav>
 		</main>
-<!--
-http://edom18.github.io/fixnel.js/
-http://wegraphics.net/downloads/free-stained-canvas-backgrounds/
-http://www.photo-ac.com/main/detail/444874?title=%E6%B9%96-%E3%83%9C%E3%83%AA%E3%83%93%E3%82%A2%E3%82%A6%E3%83%A6%E3%83%8B%E5%A1%A9%E6%B9%96
--->
-
 	</body>
 </html>

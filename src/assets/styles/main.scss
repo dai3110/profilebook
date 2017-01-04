@@ -207,59 +207,59 @@ P{
 	
 	&__panel{
 		position: absolute;
-		width: 220px;
-		height: 220px;
-		border-radius: 20px;
-		box-shadow: inset 0px 0px 12px 8px rgba(255,255,255,0.4);
+		width: 24.5vmin;
+		height: 24.5vmin;
+		border-radius: 2vmin;
+		box-shadow: inset 0vmin 0vmin 1.2vmin 0.8vmin rgba(255,255,255,0.4);
 		background-color: rgba(97, 183, 255, 0.4);
 		transition : all 500ms ease-in-out;
 		
-		&.__order_1{ top :   0px; left :   0px; }
-		&.__order_2{ top :   0px; left : 240px; }
-		&.__order_3{ top :   0px; left : 480px; }
-		&.__order_4{ top : 240px; left :   0px; }
-		&.__order_5{ top : 240px; left : 240px; }
-		&.__order_6{ top : 240px; left : 480px; }
-		&.__order_7{ top : 480px; left :   0px; }
-		&.__order_8{ top : 480px; left : 240px; }
-		&.__order_9{ top : 480px; left : 480px; }
+		&.__order_1{ top :   0vmin; left :   0vmin; }
+		&.__order_2{ top :   0vmin; left : 26vmin; }
+		&.__order_3{ top :   0vmin; left : 52vmin; }
+		&.__order_4{ top : 26vmin; left :   0vmin; }
+		&.__order_5{ top : 26vmin; left : 26vmin; }
+		&.__order_6{ top : 26vmin; left : 52vmin; }
+		&.__order_7{ top : 52vmin; left :   0vmin; }
+		&.__order_8{ top : 52vmin; left : 26vmin; }
+		&.__order_9{ top : 52vmin; left : 52vmin; }
 		
 		&::before{
 			content: attr(data-icon);
 			display : block;
 			width : 100%;
-			margin-top : 25px;
-			height : 120px;
-			line-height : 120px;
-			font-size : 11rem;
+			margin-top : 2.5vmin;
+			height : 12.5vmin;
+			line-height : 12.5vmin;
+			font-size : 12.5vmin;
 			text-align : center;
 			text-shadow: -1px -1px 1px rgba(13, 55, 98, 0.8),1px 1px 1px rgba(255,255,255,0.7);
 			pointer-events : none;
 		}
 		
 		&.__ico_fa::before{
-			font-size : 9.5rem;
+			font-size : 11.0vmin;
 			font-family: 'FontAwesome';
 		}
 		&.__ico_fa.__ico-small::before{
-			font-size : 9.0rem;
+			font-size : 10.5vmin;
 		}
 		
 		
 		&.__ico_fi::before{
-			font-size : 10.5rem;
+			font-size : 12.0vmin;
 			font-family: 'foundation-icons';
 		}
 		&.__ico_fi.__ico-small::before{
-			font-size : 9.5rem;
+			font-size : 11.0vmin;
 		}
 		
 		& >A{
 			position : absolute;
 			width : 100%;
 			height : 100%;
-			left : 0px;
-			bottom : 0px;
+			left : 0vmin;
+			bottom : 0vmin;
 			font-family: 'Nunito';
 			text-decoration: none;
 			text-align : center;
@@ -270,14 +270,14 @@ P{
 				position : absolute;
 				width : 100%;
 				height : auto;
-				left : 0px;
-				bottom : 20px;
+				left : 0vmin;
+				bottom : 2vmin;
 				display : inline-block;
-				font-size : 2.3rem;
-				line-height: 2.5rem;
+				font-size : 2.8vmin;
+				line-height: 3.0vmin;
 				
 				&.__font-small{
-					font-size : 2.1rem;
+					font-size : 2.6vmin;
 				}
 			}
 		}
@@ -308,86 +308,20 @@ P{
 				text-shadow: none;
 			}
 		}
-		
-		@media screen and (max-width:480px){
-			width: 110px;
-			height: 110px;
-			border-radius: 10px;
-			box-shadow: inset 0px 0px 6px 4px rgba(255,255,255,0.4);
-			&.__order_1{ top :   0px; left :   0px; }
-			&.__order_2{ top :   0px; left : 120px; }
-			&.__order_3{ top :   0px; left : 240px; }
-			&.__order_4{ top : 120px; left :   0px; }
-			&.__order_5{ top : 120px; left : 120px; }
-			&.__order_6{ top : 120px; left : 240px; }
-			&.__order_7{ top : 240px; left :   0px; }
-			&.__order_8{ top : 240px; left : 120px; }
-			&.__order_9{ top : 240px; left : 240px; }
-			
-			&::before{
-				margin-top : 15px;
-				height : 55px;
-				line-height : 55px;
-				font-size : 5.8rem;
-				text-shadow : none;
-			}
-			&.__ico_fa::before{
-				font-size : 4.7rem;
-			}
-			&.__ico_fa.__ico-small::before{
-				font-size : 4.5rem;
-			}
-			&.__ico_fi::before{
-				font-size : 5.2rem;
-			}
-			&.__ico_fi.__ico-small::before{
-				font-size : 4.7rem;
-			}
-			& >A{
-				& > .u-linklabel{
-					bottom : 10px;
-					font-size : 1.3rem;
-					line-height: 1.3rem;
-					&.__font-small{
-						font-size : 1.1rem;
-					}
-					text-shadow : none;
-				}
-			}
-			& >A,
-			&::before{
-				opacity : 0.85;
-			}
-			&.__main{
-				box-shadow: inset 0px 0px 6px 4px rgba(124, 186, 231, 0.25);
-			}
-			
-			&.__sub{
-				box-shadow: inset 0px 0px 6px 4px rgba(255,255,255,0.4);
-			}
-		}
-		
 	}
 	
 	&__frame{
 		position: relative;
-		top: -750px;
-		left: -350px;
-		width: 700px;
-		height: 700px;
+		top: -80.5vmin;
+		left: -39vmin;
+		width: 85vmin;
+		height: 85vmin;
 		transform: rotateX(40deg);
 		transform-origin: bottom;
 		list-style: none;
 		margin: 0px;
 		padding: 0px;
 		transition : transform 500ms ease-in-out;
-		
-		@media screen and (max-width:480px){
-			top: -380px;
-			left: -175px;
-			width: 350px;
-			height: 350px;
-		}
 	}
 	&__frame.is-active{
 		transform: rotateX(0deg);
@@ -414,14 +348,6 @@ P{
 				color: rgb(255, 255, 255);
 			}
 		}
-		@media screen and (max-width:480px){
-			&.__main{
-				box-shadow: inset 0px 0px 6px 4px rgba(73, 133, 225, 0.25);
-			}
-			&.__sub{
-				box-shadow: inset 0px 0px 6px 4px rgba(255,255,255,0.4);
-			}
-		}
 	}
 }
 
@@ -431,11 +357,12 @@ P{
 	display: inline-block;
 	width: 600px;
 	height : 120px;
-	top: 15%;
+	top: calc(50% - 17vmin - 60px);
 	left: calc(50% - 600px / 2);
 	z-index : 2;
 	white-space : nowrap;
 	pointer-events : none;
+	transform-origin : top;
 	
 	&__text{
 		font-size : 5.5rem;
@@ -496,7 +423,22 @@ P{
 		background-color: rgba(255,255,255,0.85);
 		
 		& > HEADER{
-			padding: 10px;
+			padding: 10px 10px 15px 10px;
+			position : relative;
+			
+			&:after{
+				content : '';
+				display : block;
+				position : absolute;
+				width : calc(100% - 40px);
+				height : 1px;
+				bottom : 0px;
+				left : 20px;
+				border-style: solid;
+				border-color: rgba(0,0,0,0.2);
+				border-width: 0px 0px 1px 0px;
+				box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.9)
+			}
 			
 			& > H1{
 				margin: 0px 10px;
@@ -519,8 +461,9 @@ P{
 			
 			& > P{
 				margin: 20px 20px 0px 20px;
-				color: rgba(0, 0, 0, 0.8);
-				font-size : 1.3rem;
+				color: rgba(0, 0, 0, 1);
+				font-size : 1.2rem;
+				line-height : 2.8rem;
 				letter-spacing: 1px;
 				
 				@media screen and (max-width:480px){
@@ -552,23 +495,35 @@ P{
 		}
 		
 		& > SECTION{
-			padding: 10px;
+			padding: 20px 10px;
 			font-size : 1.3rem;
 			line-height : 2.5rem;
+			position : relative;
+			color: rgba(0, 0, 0, 0.8);
 			
-			border-style: solid;
-			border-color: rgba(255,255,255,0.9);
-			border-width: 1px 0px 0px 0px;
-			box-shadow: 0px -1px 0px 0px rgba(0,0,0,0.2);
+			&:before{
+				content : '';
+				display : block;
+				position : absolute;
+				width : calc(100% - 40px);
+				height : 1px;
+				top : 0px;
+				left : 20px;
+				border-style: solid;
+				border-color: rgba(0,0,0,0.2);
+				border-width: 0px 0px 1px 0px;
+				box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.9)
+			}
 			
 			&:nth-of-type(1){
-				border-width : 0px;
-				box-shadow : none;
+				&:before{
+					content : none;
+				}
 			}
 			
 			& > H1{
 				margin: 0px 20px;
-				padding: 10px;
+				padding: 20px 0px;
 				font-size: 2.2rem;
 				color: rgba(0, 0, 0, 0.8);
 				text-shadow: 0px 0px 1px rgb(255, 255, 255), 3px 3px 0px rgba(0, 0, 0, 0.17);
@@ -600,6 +555,9 @@ P{
 					font-size: 1.2rem;
 					letter-spacing: 0px;
 				}
+			}
+			& > UL{
+				margin: 0px 20px;
 			}
 			
 			& > DL{
@@ -636,7 +594,6 @@ P{
 						margin: 0px 0px 10px 0px;
 					}
 				}
-				
 			}
 			
 			& .__thin{
@@ -658,6 +615,7 @@ P{
 		margin : 0px;
 		padding : 0px;
 		list-style-type: none;
+		color: rgba(0, 0, 0, 0.8);
 		
 		LI{
 			margin-bottom : 5px;
